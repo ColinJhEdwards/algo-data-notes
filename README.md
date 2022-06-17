@@ -2,9 +2,9 @@
 
 A simple repo where I can store my notes on algorithms, data structures, bigO notation and examples
 
-## Big O Notation
+# Big O Notation
 
-### Why is big O notation important?
+## Why is big O notation important?
 
 - There are so many solutions for solving an algorithm, how do we know which one is the best? This is where Big O comes in.
 - Take for example given the problem "write a function that accepts a string input and returns a reversed copy" you could use a variety of solutions for this, we would we use Big O notation to understand which is the best
@@ -14,7 +14,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Useful for discussing trade offs between different approaches.
   - Help understand what parts of our code that could be slowing it down.
 
-### Example
+## Example
 
 -Write a function that calculates the sum of all number from 1 up to n
 
@@ -55,7 +55,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Dont get bogged down on counting all the operations and assignments, what we are concerned about here is how our operations grow roughly in proportion with n. It is a trend. Focus on the big picture.
 
-### So what exactly is Big O?
+## So what exactly is Big O?
 
 - Think of it as fuzzy counting, it allows us to talk in a formal manner about how the runtime of an algorithm grows as the inputs grow.
 
@@ -81,7 +81,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 ![printAll](./images/printAllPairs.png)
 
-### Rules for Big O
+## Rules for Big O
 
 - Constants dont matter
   - if we have something like O(2n) this becomes O(n). If we have O(500) this becomes (1). O(13n2) becomes O(n2) <=== squared
@@ -92,3 +92,16 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Variable assignment is constant
 - Accesing elements in an array or object is constant
 - in a loop the compelxity is the length of the loop times the complexity of whatever happens inside the loop
+
+## Logarithms
+
+- Some of the most common runtime complexities youll encounter is O(1), O(n), and O(n2)
+- You will encounter big O expressions that involve more complex mathematical expressions
+  - One of these being the logarithm such as O(logn)
+- If you have a runtime complexity of O(log n) thats great! Very similar to O(1)
+- It is helpful to understand what logarithms are but at the end of the day the math isnt as important because we are always focusing on the trend
+  - the point is to be able to look at an algorithm and say "Oh this algo has a runtime of O(n)"
+- Why logathrims are importnt
+  - Certain searching algorithms have a logarithmic time complexity
+  - Efficient sorting algorithms involve logarithms
+  - Recursion sometimes involves logarithim space complexity
