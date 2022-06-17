@@ -1,6 +1,6 @@
 # algo-data-notes
 
-A simple repo where I can store my notes on algorithms, data structures, examples and bigO notation
+A simple repo where I can store my notes on algorithms, data structures, bigO notation and examples
 
 ## Big O Notation
 
@@ -9,7 +9,7 @@ A simple repo where I can store my notes on algorithms, data structures, example
 - There are so many solutions for solving an algorithm, how do we know which one is the best? This is where Big O comes in.
 - Take for example given the problem "write a function that accepts a string input and returns a reversed copy" you could use a variety of solutions for this, we would we use Big O notation to understand which is the best
 - Keep in mind that the way Big O ranks how well a solution performs is not as straight forwrd as "worst - best" its more of a numeric approach.
-- You may ask, why worry about the best solution if my code works?
+- You may ask, why worry about the best solution if my code works? If it works, it works.
   - Its important to have precise vocabulary to talk about how our code performs.
   - Useful for discussing trade offs between different approaches.
   - Help understand what parts of our code that could be slowing it down.
@@ -54,3 +54,8 @@ A simple repo where I can store my notes on algorithms, data structures, example
 ![solutionOne](./images/addUpTo.png)
 
 - Dont get bogged down on counting all the operations and assignments, what we are concerned about here is how our operations grow roughly in proportion with n. It is a trend. Focus on the big picture.
+
+### So what exactly is Big O?
+
+- Think of it as fuzzy counting, it allows us to talk in a formal manner about how the runtime of an algorithm grows as the inputs grow.
+  - we only care about the trends
