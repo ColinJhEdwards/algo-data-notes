@@ -62,18 +62,22 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - we only care about the trends
   - we are also talking about the worst case scenario when it comes to a solution
 
+- This graph is a great visual representation of different types of O notation, some have yet to be covered
+
+![examples](./images/notations.png)
+
 - We say that an algorithm is O(f(n)) if the number of simple operations the computer has to perform is eventually less than a constant times f(n), as n increases. f = function & n = input
 - if we take our previous examples
-  - Example two always has 3 operations, its constant. So it would be O(1)
+  - Example two always has 3 operations, its constant. It would have a runtime of O(1)
 
 ![solutionTwo](./images/addUpToB.png)
 
 - If we look at example one
-  - The number of operations is bounded by a multiple of n. So it would be O(n)
+  - The number of operations is bounded by a multiple of n. It would have a runtime of O(n)
 
 ![solutionOne](./images/addUpTo.png)
 
-- Now if we look at the example of this function we notice that O(n) operation for the first for loop has another O(n) operation inside of it as another for loop so it would be O(n2) <=== squared. The algo grows roughly at the rate of n squared
+- Now if we look at the example of this function we notice that O(n) operation for the first for loop has another O(n) operation inside of it as another for loop so it would have a runtime of O(n2) <=== squared. The algo grows roughly at the rate of n squared
 
 ![printAll](./images/printAllPairs.png)
 
