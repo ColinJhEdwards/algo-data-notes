@@ -76,3 +76,15 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Now if we look at the example of this function we notice that O(n) operation for the first for loop has another O(n) operation inside of it as another for loop so it would be O(n2) <=== squared. The algo grows roughly at the rate of n squared
 
 ![printAll](./images/printAllPairs.png)
+
+### Rules for Big O
+
+- Constants dont matter
+  - if we have something like O(2n) this becomes O(n). If we have O(500) this becomes (1). O(13n2) becomes O(n2) <=== squared
+- Smaller terms dont matter
+  - If we have something like O(n + 10) this becomes O(n)
+  - If we have O(n2 + 5n + 8) this becomes O(n2). Look at the big picture if n = 1000; 1000 squared is 1 mil, but 5\*1000 + 8 is 5008. The difference between the two is so small there is no point in worrying about the 5n + 8, its meaningless.
+- Arithmetic operations are constant
+- Variable assignment is constant
+- Accesing elements in an array or object is constant
+- in a loop the compelxity is the length of the loop times the complexity of whatever happens inside the loop
