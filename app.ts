@@ -10,3 +10,11 @@ const addUpTo = (n: number) => {
 const addUpToB = (n: number) => {
   return (n * (n + 1)) / 2;
 };
+
+const printAllPairs = (n: number) => {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+};
