@@ -18,3 +18,18 @@ const printAllPairs = (n: number) => {
     }
   }
 };
+
+const charCount = (str: string) => {
+  const arr = [];
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (arr[char] > 0) {
+      arr[char]++;
+    } else {
+      arr[char] = 1;
+    }
+  }
+  return arr;
+};
+
+console.log(charCount("boo"));

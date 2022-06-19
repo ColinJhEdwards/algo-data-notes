@@ -127,4 +127,72 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Adding an element to the end of array with .push() is O(1)
   - Adding an element to the beginning of an array requires all indecis to update which is O(n)
     - Same goes for removing from the beginning
-- Searching is O(n) as the number of items in a array grows the number of time grows to search through the array
+- Searching is O(n) as the number of items in a array grows the amount of time grows to search through the array
+
+- There are some built in array methods
+  - push(): O(1)
+  - pop(): O(1)
+  - shift(): O(n)
+  - unshift(): O(n)
+  - concat(): O(n)
+  - slice(): O(n)
+  - splice(): O(n)
+  - sort(): O(n \* log n)
+  - forEach(), map(), filter(), reduce(), etc..: O(n)
+
+## Algorithms and Problem Solving Patterns
+
+- OBJECTIVE
+  - understand what an algorithm is
+  - how to devise a plan to solve algorithms, even ones we are unfamiliar with
+  - compare and contrast problem solving patterns
+
+### What is an Algorithm?
+
+- A proccess or set of steps to accomplish a certain task.
+- Why is this important
+  - almost everything you do in programming involves some form of an algorithm
+  - understanding algorithms is the foundaiton for being a successful problem solver and developer
+  - and of course they come up in interviews
+- How do you improve?
+  - Devise a plan for solving problems, how do you approach a problem and break it down?
+  - Master common problem solving patterns
+
+### Problem solving strategies
+
+- Understand the problem
+
+  - Don't rush into typing out your code, take a step back and analyze the problem
+  - Ask these questions:
+    - Can I restate the problem in my own words?
+    - What are the inputs that go into the problem?
+    - What are the outputs that should come from the solution to the problem?
+    - Can the outputs be determined from the inputs?
+    - How should I label the important pieces of data? What are the pieces that matter?
+
+- Exploring Examples
+
+  - Coming up with examples can help you understand the problem better
+    - User Stories
+    - Unit Test
+    - explore simple examples, examples with empty inputs, invalid inputs
+
+- Break it down
+
+  - Write out the steps you need to take, just the basic components. This makes you think about your code before you write it and helps you catch or figure out any parts you might not understand
+  - Remember that in an interview setting a lot of the time you will be given probelms that you aren't expected to solve within the given time, they are more concerened about how you approach solving problems.
+
+- Solve / Simplify
+
+  - Solve the problem if you can, and if you cant solve a simpler problem. Try to ignore the parts giving you a hard time so you can focus on everything else
+  - After creating a simplified solution try to incorporate the difficult part
+
+- Look Back and Refactor
+
+  - Once you have a solution its tempting to leave the problem at that, if it works it works right?
+  - It's important to try and improve your code, take the time to reflect on it. What do you not like about it?
+    - is it easy to read and understand?
+    - can you imrpove the performance of your solution?
+    - can you thikn of ways to refactor?
+    - how have other people solved this problem
+  - There is rarely only one solution to solving a problem
