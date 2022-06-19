@@ -105,3 +105,26 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Certain searching algorithms have a logarithmic time complexity
   - Efficient sorting algorithms involve logarithms
   - Recursion sometimes involves logarithim space complexity
+
+## Analyzing performance of Arrays and Objects
+
+- We can understand how objects and arrays work through the lens of Big O
+
+### Objects
+
+- Objects are great when you dont need order and want fast access / insertion and removal
+- runtime complexity for
+  - accessing an object: O(1)
+  - adding to an object: O(1)
+  - removing from an object: O(1)
+
+### Arrays
+
+- Arrays are ordered unlike an object
+- Should only really use them when you need order, and fast access for insertion and removal
+- Accessing an array is O(1) its constant Ex. arr[0] / arr[9000]
+- Insertion / Removal
+  - Adding an element to the end of array with .push() is O(1)
+  - Adding an element to the beginning of an array requires all indecis to update which is O(n)
+    - Same goes for removing from the beginning
+- Searching is O(n) as the number of items in a array grows the number of time grows to search through the array
