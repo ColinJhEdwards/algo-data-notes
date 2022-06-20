@@ -196,3 +196,28 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
     - can you thikn of ways to refactor?
     - how have other people solved this problem
   - There is rarely only one solution to solving a problem
+
+### Problem Solving Patterns
+
+- Common Patterns
+
+  - Frequency Counter
+  - Multiple Pointers
+  - Sliding Window
+  - Divide and Conquer
+  - Dynamic Prgramming
+  - Greedy Algo
+  - Back Tracking
+
+- Frequency Counter
+
+  - This pattern uses objects or sets to collect values/frequencies of values
+  - this is helpful for avoiding nested loops
+  - Ex. Write a function called same which accepts two arrays. The function should return true if every value in the array has its coresponding value squared in the second array.
+  - In short you can break down two arrays and store there values in seperate objects and compare
+
+  - The approach seen below would have a complexity of O(n2) due the fact that we have a nested loop(indexOf) within a forloop.
+
+  ![same](./images/same.png)
+
+  - If we use the frequency counter approach our solution would something like the follow:

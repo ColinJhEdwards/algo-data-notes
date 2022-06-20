@@ -29,4 +29,3 @@ var charCount = function (str) {
     }
     return arr;
 };
-console.log(charCount("boo"));
