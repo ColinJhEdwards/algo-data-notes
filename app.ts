@@ -83,12 +83,12 @@ const isAnagram2 = (a: string, b: string) => {
   let frequencyCounter1 = {};
   let frequencyCounter2 = {};
   for (let val of a) {
-    frequencyCounter1[val] === val;
+    frequencyCounter1[val] === (frequencyCounter1[val] || 0) + 1;
   }
   for (let val of b) {
-    frequencyCounter2[val] === val;
+    frequencyCounter2[val] === (frequencyCounter2[val] || 0) + 1;
   }
-  console.log(frequencyCounter1, frequencyCounter2);
+  return frequencyCounter1;
 };
 
-isAnagram2("cinema", "iceman");
+console.log(isAnagram2("cinema", "iceman"));

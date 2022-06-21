@@ -81,11 +81,11 @@ var isAnagram2 = function (a, b) {
     var frequencyCounter2 = {};
     for (var _i = 0, a_1 = a; _i < a_1.length; _i++) {
         var val = a_1[_i];
-        frequencyCounter1[val] === val;
+        frequencyCounter1[val] === (frequencyCounter1[val] || 0) + 1;
     }
     for (var _a = 0, b_1 = b; _a < b_1.length; _a++) {
         var val = b_1[_a];
-        frequencyCounter2[val] === val;
+        frequencyCounter2[val] === (frequencyCounter2[val] || 0) + 1;
     }
     console.log(frequencyCounter1, frequencyCounter2);
 };
