@@ -78,15 +78,16 @@ var isAnagram2 = function (a, b) {
     if (a.length !== b.length)
         return false;
     var frequencyCounter1 = {};
-    var frequencyCounter2 = {};
-    for (var _i = 0, a_1 = a; _i < a_1.length; _i++) {
-        var val = a_1[_i];
-        frequencyCounter1[val] === (frequencyCounter1[val] || 0) + 1;
+    for (var i = 0; i < a.length; i++) {
+        var letter = a[i];
+        frequencyCounter1[letter]
+            ? (frequencyCounter1[letter] += 1)
+            : (frequencyCounter1[letter] = 1);
     }
-    for (var _a = 0, b_1 = b; _a < b_1.length; _a++) {
-        var val = b_1[_a];
-        frequencyCounter2[val] === (frequencyCounter2[val] || 0) + 1;
+    for (var i = 0; i < b.length; i++) {
+        var letter = b[i];
+        if (!frequencyCounter1[letter])
+            return false;
     }
-    console.log(frequencyCounter1, frequencyCounter2);
+    return true;
 };
-isAnagram2("cinema", "iceman");

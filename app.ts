@@ -81,14 +81,19 @@ const isAnagram = (a: string, b: string) => {
 const isAnagram2 = (a: string, b: string) => {
   if (a.length !== b.length) return false;
   let frequencyCounter1 = {};
-  let frequencyCounter2 = {};
-  for (let val of a) {
-    frequencyCounter1[val] === (frequencyCounter1[val] || 0) + 1;
+  for (let i = 0; i < a.length; i++) {
+    let letter = a[i];
+    frequencyCounter1[letter]
+      ? (frequencyCounter1[letter] += 1)
+      : (frequencyCounter1[letter] = 1);
   }
-  for (let val of b) {
-    frequencyCounter2[val] === (frequencyCounter2[val] || 0) + 1;
+  for (let i = 0; i < b.length; i++) {
+    let letter = b[i];
+    if (!frequencyCounter1[letter]) {
+      return false;
+    } else {
+      frequencyCounter1[letter] -= 1;
+    }
   }
-  return frequencyCounter1;
+  return true;
 };
-
-console.log(isAnagram2("cinema", "iceman"));
