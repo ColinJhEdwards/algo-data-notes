@@ -83,17 +83,33 @@ const isAnagram2 = (a: string, b: string) => {
   let frequencyCounter1 = {};
   for (let i = 0; i < a.length; i++) {
     let letter = a[i];
+    // if letter exists, increment, otherwise set value to 1
     frequencyCounter1[letter]
       ? (frequencyCounter1[letter] += 1)
       : (frequencyCounter1[letter] = 1);
   }
   for (let i = 0; i < b.length; i++) {
     let letter = b[i];
+    // cant find letter or letter is zero then its not an anagram return false
     if (!frequencyCounter1[letter]) {
       return false;
+      //  we subtract 1 if a letter is found to account for multiple letters
     } else {
       frequencyCounter1[letter] -= 1;
     }
   }
   return true;
+};
+
+// write a function called sumZero which accepts a sorted array of integers. The funciton should find the first pair where the sum is 0.
+// Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+
+const sumZero = (arr: Array<number>) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === 0) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
 };

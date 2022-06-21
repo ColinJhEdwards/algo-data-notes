@@ -211,7 +211,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Frequency Counter
 
-  - This pattern uses objects or sets to collect values/frequencies of values
+  - This pattern uses objects or sets to collect values and their frequency
   - this is helpful for avoiding nested loops
   - Ex. Write a function called same which accepts two arrays. The function should return true if every value in the array has its coresponding value squared in the second array.
   - In short you can break down two arrays and store there values in seperate objects and compare
@@ -232,3 +232,12 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - This approach would have a complexity of O(n) which is an improvment over O(n2)
     - with the O(n2) approach if our arrays had a length of 1000, since we have a nested loop that would be 1 million iterations
     - with the O(n) approach we have 3 seperate loops so if the array was a length of 1000 there would only be 3000 iterations
+
+- Multiple Pointers
+
+  - Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
+  - Very efficient for solving problems with minimal space complexity
+  - Ex. write a function called sumZero which accepts a sorted array of integers. The funciton should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+  - The first solution that might come to mind could be nesting a for loop within a for loop, but as we know this would be a complexity of O(n2) which is not ideal
+
+  ![Sumzero](./images/sumZero.png)
