@@ -60,4 +60,35 @@ const same2 = (arr1: Array<number>, arr2: Array<number>) => {
   for (let val of arr2) {
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
   }
+  for (let key in frequencyCounter1) {
+    if (!(parseInt(key) * 2 in frequencyCounter2)) {
+      return false;
+    }
+    if (frequencyCounter2[parseInt(key) * 2] !== frequencyCounter1[key]) {
+      return false;
+    }
+  }
 };
+
+// Given two strings write a function to determine if the second string is an anagram of the first.
+// (An anagram is a word, phrase, or name formed by rearranging the letters of another such as cinema formed from iceman.)
+
+const isAnagram = (a: string, b: string) => {
+  if (a.length !== b.length) return false;
+  return a.split("").sort().join("") === b.split("").sort().join("");
+};
+
+const isAnagram2 = (a: string, b: string) => {
+  if (a.length !== b.length) return false;
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  for (let val of a) {
+    frequencyCounter1[val] === val;
+  }
+  for (let val of b) {
+    frequencyCounter2[val] === val;
+  }
+  console.log(frequencyCounter1, frequencyCounter2);
+};
+
+isAnagram2("cinema", "iceman");

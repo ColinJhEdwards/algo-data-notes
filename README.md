@@ -220,4 +220,15 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
   ![same](./images/same.png)
 
-  - If we use the frequency counter approach our solution would something like the follow:
+  - If we use the frequency counter approach our solution would something like the following:
+
+  ![same2](./images/same2.png)
+
+  - we create two seperate frequency counters and initilize them as empty objects, storing the values from each array inside the object with how many times they occur.
+  - if our inputs for the function were two arrays such as [1,2,2,3] and [1,4,4,9] our objects would look like
+    - frequencyCounter1 = {1:1, 2:2, 3:1}
+    - frequencyCounter2 = {1:1, 4:2, 9:1}
+  - We can then compare the objects to see if the key values match
+  - This approach would have a complexity of O(n) which is an improvment over O(n2)
+    - with the O(n2) approach if our arrays had a length of 1000, since we have a nested loop that would be 1 million iterations
+    - with the O(n) approach we have 3 seperate loops so if the array was a length of 1000 there would only be 3000 iterations

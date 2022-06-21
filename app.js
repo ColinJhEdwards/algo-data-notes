@@ -29,3 +29,64 @@ var charCount = function (str) {
     }
     return arr;
 };
+//  Write a function called same which accepts two arrays. The function should return true if every value in the array has its
+//  coresponding value squared in the second array.
+var same = function (arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    for (var i = 0; i < arr1.length; i++) {
+        var correctIndex = arr2.indexOf(arr1[i] * 2);
+        if (correctIndex === -1) {
+            return false;
+        }
+        arr2.splice(correctIndex, 1);
+    }
+    return true;
+};
+var same2 = function (arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    var frequencyCounter1 = {};
+    var frequencyCounter2 = {};
+    for (var _i = 0, arr1_1 = arr1; _i < arr1_1.length; _i++) {
+        var val = arr1_1[_i];
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    }
+    for (var _a = 0, arr2_1 = arr2; _a < arr2_1.length; _a++) {
+        var val = arr2_1[_a];
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    }
+    for (var key in frequencyCounter1) {
+        if (!(parseInt(key) * 2 in frequencyCounter2)) {
+            return false;
+        }
+        if (frequencyCounter2[parseInt(key) * 2] !== frequencyCounter1[key]) {
+            return false;
+        }
+    }
+};
+// Given two strings write a function to determine if the second string is an anagram of the first.
+// (An anagram is a word, phrase, or name formed by rearranging the letters of another such as cinema formed from iceman.)
+var isAnagram = function (a, b) {
+    if (a.length !== b.length)
+        return false;
+    return a.split("").sort().join("") === b.split("").sort().join("");
+};
+var isAnagram2 = function (a, b) {
+    if (a.length !== b.length)
+        return false;
+    var frequencyCounter1 = {};
+    var frequencyCounter2 = {};
+    for (var _i = 0, a_1 = a; _i < a_1.length; _i++) {
+        var val = a_1[_i];
+        frequencyCounter1[val] === val;
+    }
+    for (var _a = 0, b_1 = b; _a < b_1.length; _a++) {
+        var val = b_1[_a];
+        frequencyCounter2[val] === val;
+    }
+    console.log(frequencyCounter1, frequencyCounter2);
+};
+isAnagram2("cinema", "iceman");
