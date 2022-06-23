@@ -80,14 +80,60 @@ var isAnagram2 = function (a, b) {
     var frequencyCounter1 = {};
     for (var i = 0; i < a.length; i++) {
         var letter = a[i];
+        // if letter exists, increment, otherwise set value to 1
         frequencyCounter1[letter]
             ? (frequencyCounter1[letter] += 1)
             : (frequencyCounter1[letter] = 1);
     }
     for (var i = 0; i < b.length; i++) {
         var letter = b[i];
-        if (!frequencyCounter1[letter])
+        // cant find letter or letter is zero then its not an anagram return false
+        if (!frequencyCounter1[letter]) {
             return false;
+            //  we subtract 1 if a letter is found to account for multiple letters
+        }
+        else {
+            frequencyCounter1[letter] -= 1;
+        }
     }
     return true;
 };
+// write a function called sumZero which accepts a sorted array of integers. The funciton should find the first pair where the sum is 0.
+// Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+var sumZero = function (arr) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === 0) {
+                return [arr[i], arr[j]];
+            }
+        }
+    }
+};
+var sumZero2 = function (arr) {
+    var left = 0;
+    var right = arr.length - 1;
+    while (left < right) {
+        var sum = arr[left] + arr[right];
+        if (sum === 0) {
+            return [arr[left], arr[right]];
+        }
+        else if (sum > 0) {
+            right--;
+        }
+        else {
+            left++;
+        }
+    }
+};
+// Implement a function called countUniqueValues, which accepts a sorted array and counts the unique values in the array.
+var countUnique = function (arr) {
+    var a = 0;
+    for (var b = 1; b < arr.length; b++) {
+        if (arr[a] !== arr[b]) {
+            a++;
+            arr[a] = arr[b];
+        }
+    }
+    return a + 1;
+};
+countUnique([1, 1, 2, 3, 3, 4, 5, 6, 6, 7]);

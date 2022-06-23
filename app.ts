@@ -128,3 +128,19 @@ const sumZero2 = (arr: Array<number>) => {
     }
   }
 };
+
+// Implement a function called countUniqueValues, which accepts a sorted array and counts the unique values in the array.
+
+const countUnique = (arr: Array<number>) => {
+  if (arr.length === 0) return 0;
+  let a = 0;
+  for (let b = 1; b < arr.length; b++) {
+    if (arr[a] !== arr[b]) {
+      a++;
+      arr[a] = arr[b];
+    }
+  }
+  return a + 1;
+};
+
+countUnique([1, 1, 2, 3, 3, 4, 5, 6, 6, 7]);
