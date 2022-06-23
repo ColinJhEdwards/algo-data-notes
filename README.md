@@ -77,17 +77,17 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 ![solutionOne](./images/addUpTo.png)
 
-- Now if we look at the example of this function we notice that O(n) operation for the first for loop has another O(n) operation inside of it as another for loop so it would have a runtime of O(n2) <=== squared. The algo grows roughly at the rate of n squared
+- Now if we look at the example of this function we notice that O(n) operation for the first for loop has another O(n) operation inside of it as another for loop so it would have a runtime of O(n^2) <=== squared. The algo grows roughly at the rate of n squared
 
 ![printAll](./images/printAllPairs.png)
 
 ## Rules for Big O
 
 - Constants dont matter
-  - if we have something like O(2n) this becomes O(n). If we have O(500) this becomes (1). O(13n2) becomes O(n2) <=== squared
+  - if we have something like O(2n) this becomes O(n). If we have O(500) this becomes (1). O(13n2) becomes O(n^2) <=== squared
 - Smaller terms dont matter
   - If we have something like O(n + 10) this becomes O(n)
-  - If we have O(n2 + 5n + 8) this becomes O(n2). Look at the big picture if n = 1000; 1000 squared is 1 mil, but 5\*1000 + 8 is 5008. The difference between the two is so small there is no point in worrying about the 5n + 8, its meaningless.
+  - If we have O(n^2 + 5n + 8) this becomes O(n^2). Look at the big picture if n = 1000; 1000 squared is 1 mil, but 5\*1000 + 8 is 5008. The difference between the two is so small there is no point in worrying about the 5n + 8, its meaningless.
 - Arithmetic operations are constant
 - Variable assignment is constant
 - Accesing elements in an array or object is constant
@@ -95,7 +95,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 ## Logarithms
 
-- Some of the most common runtime complexities youll encounter is O(1), O(n), and O(n2)
+- Some of the most common runtime complexities youll encounter is O(1), O(n), and O(n^2)
 - You will encounter big O expressions that involve more complex mathematical expressions
   - One of these being the logarithm such as O(logn)
 - If you have a runtime complexity of O(log n) thats great! Very similar to O(1)
@@ -216,7 +216,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Ex. Write a function called same which accepts two arrays. The function should return true if every value in the array has its coresponding value squared in the second array.
   - In short you can break down two arrays and store there values in seperate objects and compare
 
-  - The approach seen below would have a complexity of O(n2) due the fact that we have a nested loop(indexOf) within a forloop.
+  - The approach seen below would have a complexity of O(n^2) due the fact that we have a nested loop(indexOf) within a forloop.
 
   ![same](./images/same.png)
 
@@ -229,8 +229,8 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
     - frequencyCounter1 = {1:1, 2:2, 3:1}
     - frequencyCounter2 = {1:1, 4:2, 9:1}
   - We can then compare the objects to see if the key values match
-  - This approach would have a complexity of O(n) which is an improvment over O(n2)
-    - with the O(n2) approach if our arrays had a length of 1000, since we have a nested loop that would be 1 million iterations
+  - This approach would have a complexity of O(n) which is an improvment over O(n^2)
+    - with the O(n^2) approach if our arrays had a length of 1000, since we have a nested loop that would be 1 million iterations
     - with the O(n) approach we have 3 seperate loops so if the array was a length of 1000 there would only be 3000 iterations
 
 - Multiple Pointers
@@ -238,6 +238,13 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
   - Very efficient for solving problems with minimal space complexity
   - Ex. write a function called sumZero which accepts a sorted array of integers. The funciton should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
-  - The first solution that might come to mind could be nesting a for loop within a for loop, but as we know this would be a complexity of O(n2) which is not ideal
+  - The first solution that might come to mind could be nesting a for loop within a for loop, but as we know this would be a complexity of O(n^2) which is not ideal
 
   ![Sumzero](./images/sumZero.png)
+
+  - For this example we know that are input of numbers is going to be in order which is necessary for using pointers.
+  - We will set a pointer at the beginning of the array, the smallest number, and a pointer at the end of the array, the largest number.
+  - If the sum is greater than 0 we will move the right pointer down 1, and if its less than 0 we will move the left pointer up 1. This is why its important to know that our array is sorted.
+  - This solution will have a complexity of O(n) much better than O(n^2)
+
+  ![Sumzero2](./images/sumZero2.png)
