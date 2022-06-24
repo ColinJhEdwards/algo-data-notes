@@ -144,3 +144,33 @@ const countUnique = (arr: Array<number>) => {
 };
 
 countUnique([1, 1, 2, 3, 3, 4, 5, 6, 6, 7]);
+
+const maxSum = (arr: Array<number>, num: number) => {
+  if (num > arr.length) return null;
+  let max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i++) {
+    let temp = 0;
+    for (let j = 0; j < num; j++) {
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+};
+
+const maxSum2 = (arr: Array<number>, num: number) => {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    let temp = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+};

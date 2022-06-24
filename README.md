@@ -248,3 +248,19 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - This solution will have a complexity of O(n) much better than O(n^2)
 
   ![Sumzero2](./images/sumZero2.png)
+
+- Sliding Window Pattern
+
+  - This pattern involves creating a window which can either be an array or number from one position to another
+  - Depending on a certain condition, the window either increases or closes
+  - very useful for keeping track of a subset of data in an array/string etc.
+  - for example say given an array you wanted to calculate the maximum sum of 2 consecutive numbers, you could make a window and move the window across the array depending on the condition.
+
+  ![maxSum](./images/maxSum.png)
+
+  - The problem with the solution seen above is the nested loop, leading to a complexity of O(n^2). If our array was extremely large and we were looking for the max sum of 100,000 digits this would be extremely inefficient.
+  - If we were to refacor the solution and incorporate the sliding window, it would look something like this.
+
+  ![maxSum2](./images/maxSum2.png)
+
+  - This solution allows up to loop over the array one time. We do this by storing the initial value of the summed digits and instead of repeating the process over and over we instead subtract the first number and add the new number. This solution would have a complexity of O(n)
