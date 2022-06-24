@@ -174,3 +174,29 @@ const maxSum2 = (arr: Array<number>, num: number) => {
   }
   return maxSum;
 };
+
+const search = (arr: Array<number>, val: number) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const search2 = (arr: Array<number>, val: number) => {
+  let min = 0;
+  let max = arr.length - 1;
+  while (min <= max) {
+    let middle = Math.floor((max + min) / 2);
+    let currentElement = arr[middle];
+    if (arr[middle] < val) {
+      min = middle + 1;
+    } else if (arr[middle] > val) {
+      max = middle - 1;
+    } else {
+      return middle;
+    }
+  }
+  return -1;
+};

@@ -264,3 +264,20 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   ![maxSum2](./images/maxSum2.png)
 
   - This solution allows up to loop over the array one time. We do this by storing the initial value of the summed digits and instead of repeating the process over and over we instead subtract the first number and add the new number. This solution would have a complexity of O(n)
+
+- Divide and Conquer
+
+  - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data. (Think of the phonebook example from CS50)
+  - This pattern can greatly decrease time complexity.
+  - Ex. Given a sorted array of integers, write a function called searh that accepts a value and returns the index of where that value is found.
+  - In the solution below, we loop over the array until we find the number in the array that matches the given value, giving us a complexity of O(n), which is not terrible, but it could be better!
+
+  ![search](./images/search.png)
+
+  - If we were to refactor our solution to use the divide and conquer method, in this case a binary search, it would look something like the following:
+
+  ![search2](./images/search2.png)
+
+  - We start in the middle of the array and check if the number we are on is less then or greater then the value we are searching for and move in accordance.
+  - This has a complexity of Log(n)
+  - Keep in mind for this method to work our array must be sorted.
