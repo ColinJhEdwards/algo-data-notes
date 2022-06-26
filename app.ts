@@ -200,3 +200,26 @@ const search2 = (arr: Array<number>, val: number) => {
   }
   return -1;
 };
+
+// Write a function called sameFrequency. given two positive intergers find out if the two numbers have the same frequency ofdigits.
+// Ex. sameFrequency(182, 281) == true
+const sameFrequency = (a: number, b: number) => {
+  if (a.toString().length != b.toString().length) return false;
+  let tracker = {};
+  let tracker2 = {};
+  for (let num of a.toString()) {
+    tracker[num] = (tracker[num] || 0) + 1;
+  }
+  for (let num of b.toString()) {
+    tracker2[num] = (tracker2[num] || 0) + 1;
+  }
+  for (let key in tracker) {
+    if (tracker[key] != tracker2[key]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+
+console.log(sameFrequency(192837465, 123456789));

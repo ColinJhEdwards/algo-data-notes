@@ -127,6 +127,8 @@ var sumZero2 = function (arr) {
 };
 // Implement a function called countUniqueValues, which accepts a sorted array and counts the unique values in the array.
 var countUnique = function (arr) {
+    if (arr.length === 0)
+        return 0;
     var a = 0;
     for (var b = 1; b < arr.length; b++) {
         if (arr[a] !== arr[b]) {
@@ -137,3 +139,84 @@ var countUnique = function (arr) {
     return a + 1;
 };
 countUnique([1, 1, 2, 3, 3, 4, 5, 6, 6, 7]);
+var maxSum = function (arr, num) {
+    if (num > arr.length)
+        return null;
+    var max = -Infinity;
+    for (var i = 0; i < arr.length - num + 1; i++) {
+        var temp = 0;
+        for (var j = 0; j < num; j++) {
+            temp += arr[i + j];
+        }
+        if (temp > max) {
+            max = temp;
+        }
+    }
+    return max;
+};
+var maxSum2 = function (arr, num) {
+    var maxSum = 0;
+    var tempSum = 0;
+    if (arr.length < num)
+        return null;
+    for (var i = 0; i < num; i++) {
+        maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (var i = num; i < arr.length; i++) {
+        var temp = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+};
+var search = function (arr, val) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === val) {
+            return i;
+        }
+    }
+    return -1;
+};
+var search2 = function (arr, val) {
+    var min = 0;
+    var max = arr.length - 1;
+    while (min <= max) {
+        var middle = Math.floor((max + min) / 2);
+        var currentElement = arr[middle];
+        if (arr[middle] < val) {
+            min = middle + 1;
+        }
+        else if (arr[middle] > val) {
+            max = middle - 1;
+        }
+        else {
+            return middle;
+        }
+    }
+    return -1;
+};
+// Write a function called sameFrequency. given two positive intergers find out if the two numbers have the same frequency ofdigits.
+// Ex. sameFrequency(182, 281) == true
+var sameFrequency = function (a, b) {
+    if (a.toString().length != b.toString().length)
+        return false;
+    var tracker = {};
+    var tracker2 = {};
+    for (var _i = 0, _a = a.toString(); _i < _a.length; _i++) {
+        var num = _a[_i];
+        tracker[num] = (tracker[num] || 0) + 1;
+    }
+    for (var _b = 0, _c = b.toString(); _b < _c.length; _b++) {
+        var num = _c[_b];
+        tracker2[num] = (tracker2[num] || 0) + 1;
+    }
+    for (var key in tracker) {
+        if (tracker[key] != tracker2[key]) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+};
+console.log(sameFrequency(192837465, 123456789));
