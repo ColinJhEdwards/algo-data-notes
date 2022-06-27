@@ -4,7 +4,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 # Big O Notation
 
-## Why is big O notation important?
+## ---------------------------Why is big O notation important?---------------------------
 
 - There are so many solutions for solving an algorithm, how do we know which one is the best? This is where Big O comes in.
 - Take for example given the problem "write a function that accepts a string input and returns a reversed copy" you could use a variety of solutions for this, we would we use Big O notation to understand which is the best
@@ -14,7 +14,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Useful for discussing trade offs between different approaches.
   - Help understand what parts of our code that could be slowing it down.
 
-## Example
+### Example
 
 -Write a function that calculates the sum of all number from 1 up to n
 
@@ -55,7 +55,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Dont get bogged down on counting all the operations and assignments, what we are concerned about here is how our operations grow roughly in proportion with n. It is a trend. Focus on the big picture.
 
-## So what exactly is Big O?
+## ---------------------------So what exactly is Big O?---------------------------
 
 - Think of it as fuzzy counting, it allows us to talk in a formal manner about how the runtime of an algorithm grows as the inputs grow.
 
@@ -81,7 +81,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 ![printAll](./images/printAllPairs.png)
 
-## Rules for Big O
+## ---------------------------Rules for Big O---------------------------
 
 - Constants dont matter
   - if we have something like O(2n) this becomes O(n). If we have O(500) this becomes (1). O(13n2) becomes O(n^2) <=== squared
@@ -93,7 +93,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Accesing elements in an array or object is constant
 - in a loop the compelxity is the length of the loop times the complexity of whatever happens inside the loop
 
-## Logarithms
+## ---------------------------Logarithms---------------------------
 
 - Some of the most common runtime complexities youll encounter is O(1), O(n), and O(n^2)
 - You will encounter big O expressions that involve more complex mathematical expressions
@@ -106,7 +106,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Efficient sorting algorithms involve logarithms
   - Recursion sometimes involves logarithim space complexity
 
-## Analyzing performance of Arrays and Objects
+## ---------------------------Analyzing performance of Arrays and Objects---------------------------
 
 - We can understand how objects and arrays work through the lens of Big O
 
@@ -140,7 +140,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - sort(): O(n \* log n)
   - forEach(), map(), filter(), reduce(), etc..: O(n)
 
-## Algorithms and Problem Solving Patterns
+## ---------------------------Algorithms and Problem Solving Patterns---------------------------
 
 - OBJECTIVE
   - understand what an algorithm is
@@ -282,7 +282,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - This has a complexity of Log(n)
   - Keep in mind for this method to work our array must be sorted.
 
-## Recursion
+## ---------------------------Recursion---------------------------
 
 - Recursion is another way to think about writing a solution.
 - To help understand recursion, we shall tell a story:
@@ -308,3 +308,24 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - What happens behind the scenes when a recusive function is called over and over again?
 - In almost all program languages there is a built in data structure that mangages what happens when functions are invoked. The call stack
 - When a function is invoked its placed on top of the call stack, when the function ends the compiler will remove the function from the top.
+- When working with recursion functions you'll be working with the call stack a lot.
+
+### How Recursive functions work
+
+- Invoke the same function with a different input until you reach your base case.
+- The base case is the condition when the recursion ends. THIS IS THE MOST IMPORTANT PART TO UNDERSTAND
+- Overall there is two essential parts of a recursive function
+  - the Base Case
+  - and having different inputs (think of the list from the dragon story)
+- The function below, countdown, is an example of a recursive function
+
+![countdown](./images/countdown.png)
+
+- Basically we are looping, but using recursion to demonstrate the concept.
+- We do not reach our base case until num is <= 0, if our number does not meet this condition we subtract 1 from our number and run countdown with the new number.
+
+- Here is another example of recursion
+
+![sumRange](./images/sumRange.png)
+
+- here our base case is one, if num === 1 we return 1.

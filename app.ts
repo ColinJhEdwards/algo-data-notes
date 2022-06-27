@@ -221,3 +221,21 @@ const sameFrequency = (a: number, b: number) => {
     }
   }
 };
+
+// Example of a recursive function
+
+const countdown = (num: number) => {
+  if (num <= 0) {
+    console.log("All Done");
+    return;
+  }
+  num--;
+  countdown(num);
+};
+
+// Another example of a recursive function
+
+const sumRange = (num: number) => {
+  if (num === 1) return 1;
+  return num + sumRange(num - 1);
+};
