@@ -295,3 +295,16 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - The dragon tilts his head to the side with a curious look on his face and replies "Ah, I see my boy. So you've dicovered recursion?"
 
 ### So why use recursion?
+
+- Recursion: A process that calls itself, in our case, a function.
+- It occurs everywhere, all the time. If you've been writing javascript you've probably been using recursion
+  - JSON.parse / JSON.stringify.
+  - document.getElementById/querySelector and dom traversal algorithms.
+  - Object Traversal
+  - We will see it with more complex data structures.
+
+### Lets talk about the call stack
+
+- What happens behind the scenes when a recusive function is called over and over again?
+- In almost all program languages there is a built in data structure that mangages what happens when functions are invoked. The call stack
+- When a function is invoked its placed on top of the call stack, when the function ends the compiler will remove the function from the top.
