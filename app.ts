@@ -239,3 +239,10 @@ const sumRange = (num: number) => {
   if (num === 1) return 1;
   return num + sumRange(num - 1);
 };
+
+// one more recursion function
+
+const factorial = (num: number) => {
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+};
