@@ -221,5 +221,3 @@ const sameFrequency = (a: number, b: number) => {
     }
   }
 };
-
-console.log(sameFrequency(192837465, 123456789));

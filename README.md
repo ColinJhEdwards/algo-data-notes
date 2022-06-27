@@ -281,3 +281,17 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - We start in the middle of the array and check if the number we are on is less then or greater then the value we are searching for and move in accordance.
   - This has a complexity of Log(n)
   - Keep in mind for this method to work our array must be sorted.
+
+## Recursion
+
+- Recursion is another way to think about writing a solution.
+- To help understand recursion, we shall tell a story:
+  - Once upon a time there was a little boy named Martin, this was during a time where computers didnt exist and instead we had wizards. Martin was training with the wizards and out in the world there was also an angry dragon. The wizard gave martin a task to talk to the dragon, he gave Martin a list of numbers and wanted Martin to find out if any of the numbers on the list were odd numbers, a task only the dragon could complete.
+  - So Martin approached the dragon and said "Excuse me Mr.Dragon, are any of these numbers odd? (3142, 5798, 6550, 5914)"
+  - The dragon is not in a good mood, and says "Sorry boy, ill only tell you if the first number in that list is odd"
+  - Martin replies "BUT I NEED TO KNOW IF ANY OF THE NUMBERS IN THE LIST ARE ODD NOT JUST THE FIRST"
+  - The dragon remains firm and stands his ground. So martin think a bit an what he could do and comes up with a solution. Being the clever apprentice to the wizard Martin approaches the dragon and says "Alright is this number odd?" (3142, 5798, 6550, 5914) and gives him the original list. The dragon looks at the first number in the list and gives his answer. Martin then returns and says "Okay is this number odd?" giving him this list (5798, 6550, 5914) and repeats this process until going through all the numbers individually, through this process he discovers that none of the numbers are odd.
+  - Feeling triumphant Martin exclaims to the dragon "AHA so you're saying none of the numbers in the original list are odd!"
+  - The dragon tilts his head to the side with a curious look on his face and replies "Ah, I see my boy. So you've dicovered recursion?"
+
+### So why use recursion?
