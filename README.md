@@ -341,10 +341,29 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 ### Common Recursion pitfalls
 
-- No Base Case, or base case is wrong. Without a base case your code could continually run.
+- No Base Case, or base case is wrong. Without a base case your code could continually run. Infinite loop bad >:(
 - Forgetting to return or returning the wrong thing.
 - Running into a stack overflow, to many functions being run in the callstack.
 
 ### Helper Method Recursion
 
 - A design pattern commonly used with recursion.
+- Look at is a helper that we have within our function.
+- For example maybe we need to store the value of something such as: given a list of numbers return an array of all odd numbers.
+- we could define a variable of arr which equals an empty array and push the odd numbers into the array. However if we have a recursive function, its going to run multible times meaning our variable for the array will always be reset back to an empty array instead of storing our values seeing that the empty array is its initial value.
+- To fix this we could create a seperate function within our main function that performs the recursion, and keep are array outside. This is our helper.
+- If we incorporate the helper method our function would like something like this:
+
+![storeOdds](./images/storeOdds.png)
+
+### Pure Recursion
+
+- The function itself is self contained, there is no nested function.
+- I honestly am having trouble wrapping my brain around this to, so uh try your bestt :)
+
+![collectOdds](./images/collectOdds.png)
+
+- Pure recursion tips
+  - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
+  - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
+  - to make copies of objects use Object.assign or the spread operator

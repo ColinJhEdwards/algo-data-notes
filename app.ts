@@ -246,3 +246,33 @@ const factorial = (num: number) => {
   if (num === 1) return 1;
   return num * factorial(num - 1);
 };
+
+// Given a list of numbers create a recursive function that stores all odd numbers in an array and return that array.
+
+// const storeOdds = (arr: number[]) => {
+//   let result = [];
+//   function helper(input: number[]) {
+//     if (input.length === 0) {
+//       return;
+//     }
+//     if (input[0] % 2 !== 0) {
+//       result.push(input[0]);
+//     }
+//     helper(input.slice(1));
+//   }
+//   helper(arr);
+
+//   return result;
+// };
+
+// const collectOdds = (arr: number[]) => {
+//   let newArr = [];
+//   if (arr.length === 0) {
+//     return newArr;
+//   }
+//   if (arr[0] % 2 !== 0) {
+//     newArr.push(arr[0]);
+//   }
+//   newArr = newArr.concat(collectOdds(arr.slice(1)));
+//   return newArr;
+// };
