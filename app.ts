@@ -276,3 +276,9 @@ const factorial = (num: number) => {
 //   newArr = newArr.concat(collectOdds(arr.slice(1)));
 //   return newArr;
 // };
+
+const linearSearch = (arr: number[], target: number) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) return i;
+  }
+};

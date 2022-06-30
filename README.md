@@ -364,6 +364,35 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 ![collectOdds](./images/collectOdds.png)
 
 - Pure recursion tips
+
   - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
   - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
   - to make copies of objects use Object.assign or the spread operator
+
+## Searching Algorithms
+
+- OBJECTIVES
+  - implement linear search on arrays
+  - implement binary search on sorted arrays
+  - implment a naive string searching algo
+  - implement the kmp string searching algo
+
+### Linear search
+
+- The simplest way to search through an array for a specific item is to search through it from the beginning until you find the item you're looking for
+- This approach would be a linear search
+- JavaScript has some built in methods for this
+  - indexOf
+  - includes
+  - find
+  - findIndex
+- Example. Given an array of numebrs and a target value return the index of the target value within the array.
+
+![linearSearch](./images/linearSearch.png)
+
+- This would have a time complexity of O(n)
+  - The best case for time complexity would be O(1) we find our thing right away, this is rare though
+  - The worst case is O(n) our complexity is dependent on the length of the array in this case
+  - However average is also O(n)
+
+### Binary search
