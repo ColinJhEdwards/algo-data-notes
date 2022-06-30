@@ -396,3 +396,16 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - However average is also O(n)
 
 ### Binary search
+
+- Binary is much faster form of searching (Think of the phonebook example form CS50)
+- rather than eliminating one element at a time, in binary search we can eliminate halfo f the remaining elemetns at a time
+- Keep in mind binary search only works on sorted arrays
+- We divide and conquer, we split our array into two pieces
+
+![binarySearch](./images/binarySearch.png)
+
+- In the solution seen above, we create three pointer, one for the beginning of the array (left) one for the end of the array (right) and one for the middle of the array (middle)
+- We then create a while loop with two conditions
+  - the first being to continue looping if the middle value does not equal our target value seeing that is our goal.
+  - the second is a safety net incase our value is not in our array. If at any point left is greater than right we will exit the loop to prevent an infinite loop.
+- From there we simply check if our target value is greater than or less than our middle value and adjust our pointers accordingly
