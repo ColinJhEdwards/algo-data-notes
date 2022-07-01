@@ -409,3 +409,5 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - the first being to continue looping if the middle value does not equal our target value seeing that is our goal.
   - the second is a safety net incase our value is not in our array. If at any point left is greater than right we will exit the loop to prevent an infinite loop.
 - From there we simply check if our target value is greater than or less than our middle value and adjust our pointers accordingly
+- Rememeber this only works if your array is sorted!
+- this approach would have an approach of O(log N)
