@@ -411,3 +411,31 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - From there we simply check if our target value is greater than or less than our middle value and adjust our pointers accordingly
 - Rememeber this only works if your array is sorted!
 - this approach would have an approach of O(log N)
+
+## Sorting Algorithms
+
+- BIG BOY STUFF
+- This is an important topic, a great challenge, and something you'll do all the time as a developer but don't be intimidated!
+- For now we will focus on arrays and numbers
+- Examples
+  - sort numbers from smallest to largest
+  - sorting names alphabetically
+  - sorting movies based on release year
+  - soring movies based on revenue
+- There is so many ways to sort, some better than others, some that are neich and are usually terrible in most scenerios except in specific situations.
+- The following link is a great video demonstrating different sorting algorithms visually
+  - https://www.youtube.com/watch?v=kPRA0W1kECg&ab_channel=TimoBingmann
+- Most commonly used sort algorithms
+  - Insertion
+  - Selection
+  - Bubble
+  - Shell
+  - Merge
+  - Heap
+  - Quick
+
+### Why learn this?
+
+- Sorting is so common in programming, yes there is built in sort methods for js but its important to understand what algorithm it's using behind the scenes and alternative options
+- There are many ways to sort and different techniques have their own advantages and disadvantages
+-
