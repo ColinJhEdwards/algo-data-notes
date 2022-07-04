@@ -438,4 +438,9 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Sorting is so common in programming, yes there is built in sort methods for js but its important to understand what algorithm it's using behind the scenes and alternative options
 - There are many ways to sort and different techniques have their own advantages and disadvantages
--
+- Also a classic interview topic :)
+
+### Bubble Sort
+
+- Not very commonly used, but its good to understand and helps us understand future approaches
+- Its called bubble sort because when sorting an array the larger values will bubble up to the top
