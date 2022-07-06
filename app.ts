@@ -314,4 +314,18 @@ const naiveBubbleSort = (arr: number[]) => {
   }
 };
 
-const bubbleSort = (arr: number[]) => {};
+const selectionSort = (arr: number[]) => {
+  for (let i = 0; i < arr.length; i++) {
+    let tiny = i;
+    for (let j = i + 1; arr.length; j++) {
+      if (arr[tiny] > arr[j]) {
+        tiny = j;
+      }
+    }
+    if (i !== tiny) {
+      let temp = arr[i];
+      arr[i] = arr[tiny];
+      arr[tiny] = temp;
+    }
+  }
+};

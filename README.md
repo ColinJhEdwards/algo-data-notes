@@ -444,3 +444,13 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Not very commonly used, but its good to understand and helps us understand future approaches
 - Its called bubble sort because when sorting an array the larger values will bubble up to the top
+- we compare two values in the array and whichever is larger is swapped forward
+
+![badBubbleSort](./images/badBubbleSort.png)
+
+### Selection Sort
+
+- Similar to bubble sort, but instead of first placing large values into sorted position, selection sort places small values into sorted position.
+- We search through the array for the smallest value and move it to the front of the array
+
+![selectionSort](./images/selectionSort.png)
