@@ -454,3 +454,9 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - We search through the array for the smallest value and move it to the front of the array
 
 ![selectionSort](./images/selectionSort.png)
+
+### Insertion Sort
+
+- Builds up the sort by gradually creating a larger half which is always sorted
+
+![insertionSort](./images/inseritonSort.png)
