@@ -460,3 +460,10 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Builds up the sort by gradually creating a larger half which is always sorted
 
 ![insertionSort](./images/inseritonSort.png)
+
+### Comparing bubble, insertion, and selection sort
+
+- Bubble and insertion sort perform extremlly well on nearly sorted data
+- time complexity for these will be O(n^2)
+- space complexity will be O(1)
+- at the end of the day they are all pretty equivalent in comparison to better algorithms
