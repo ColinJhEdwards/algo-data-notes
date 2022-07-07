@@ -341,6 +341,7 @@ const insertionSort = (arr: number[]) => {
   return arr;
 };
 
+// Practice merging two arrays
 const merge = (a: number[], b: number[]) => {
   const arr: number[] = [];
   let i = 0;
@@ -353,6 +354,14 @@ const merge = (a: number[], b: number[]) => {
       arr.push(b[j]);
       j++;
     }
+  }
+  while (i < a.length) {
+    arr.push(a[i]);
+    i++;
+  }
+  while (j < b.length) {
+    arr.push(b[j]);
+    j++;
   }
   return arr;
 };
