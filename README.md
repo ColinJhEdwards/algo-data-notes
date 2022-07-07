@@ -466,4 +466,20 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Bubble and insertion sort perform extremlly well on nearly sorted data
 - time complexity for these will be O(n^2)
 - space complexity will be O(1)
-- at the end of the day they are all pretty equivalent in comparison to better algorithms
+- Very slow with large datasets
+- at the end of the day they are all pretty equivalent in performance
+
+## Intermediate Sorting Algorithms
+
+- Don't be scared if you dont understand the concepts so far! If you are not understanding the basic sorting methods and have trouble writing the code on your own and understanding it, thats so normal! Keep going!
+- The following sorting algorithms we will be learning about will be more of an intermediate level but they are faster compared to previous methods we just worked with.
+- Improve our time complexity from O(n^2) to O(n log n) which is pretty good compared to O(n^2)
+- trade off between efficiency and simplicity
+- Take longer to understand but worth it
+
+### Merge Sort
+
+- Combination of merging and sorting
+- exploits the fact that rrays of 0 or 1 element are always sorted
+- works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array
+-

@@ -219,4 +219,127 @@ var sameFrequency = function (a, b) {
         }
     }
 };
-console.log(sameFrequency(192837465, 123456789));
+// Example of a recursive function
+var countdown = function (num) {
+    if (num <= 0) {
+        console.log("All Done");
+        return;
+    }
+    num--;
+    countdown(num);
+};
+// Another example of a recursive function
+var sumRange = function (num) {
+    if (num === 1)
+        return 1;
+    return num + sumRange(num - 1);
+};
+// one more recursion function
+var factorial = function (num) {
+    if (num === 1)
+        return 1;
+    return num * factorial(num - 1);
+};
+// Given a list of numbers create a recursive function that stores all odd numbers in an array and return that array.
+// const storeOdds = (arr: number[]) => {
+//   let result = [];
+//   function helper(input: number[]) {
+//     if (input.length === 0) {
+//       return;
+//     }
+//     if (input[0] % 2 !== 0) {
+//       result.push(input[0]);
+//     }
+//     helper(input.slice(1));
+//   }
+//   helper(arr);
+//   return result;
+// };
+// const collectOdds = (arr: number[]) => {
+//   let newArr = [];
+//   if (arr.length === 0) {
+//     return newArr;
+//   }
+//   if (arr[0] % 2 !== 0) {
+//     newArr.push(arr[0]);
+//   }
+//   newArr = newArr.concat(collectOdds(arr.slice(1)));
+//   return newArr;
+// };
+var linearSearch = function (arr, target) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === target)
+            return i;
+    }
+};
+var binarySearch = function (arr, target) {
+    var left = 0;
+    var right = arr.length - 1;
+    var middle = Math.floor((left + right) / 2);
+    while (arr[middle] !== target && left <= right) {
+        if (target < arr[middle]) {
+            right = middle - 1;
+        }
+        else {
+            left = middle + 1;
+        }
+        middle = Math.floor((left + right) / 2);
+    }
+    if (arr[middle] == target) {
+        return middle;
+    }
+    else {
+        return -1;
+    }
+};
+var naiveBubbleSort = function (arr) {
+    for (var i = arr.length; i > 0; i--) {
+        for (var j = 0; j < i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+};
+var selectionSort = function (arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var tiny = i;
+        for (var j = i + 1; arr.length; j++) {
+            if (arr[tiny] > arr[j]) {
+                tiny = j;
+            }
+        }
+        if (i !== tiny) {
+            var temp = arr[i];
+            arr[i] = arr[tiny];
+            arr[tiny] = temp;
+        }
+    }
+};
+var insertionSort = function (arr) {
+    for (var i = 1; i < arr.length; i++) {
+        var currentVal = arr[i];
+        for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = currentVal;
+    }
+    return arr;
+};
+var merge = function (a, b) {
+    var arr = [];
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] < b[i + 1]) {
+            arr.push(a[i]);
+            arr.push(b[i + 1]);
+        }
+        else {
+            arr.push(b[i + 1]);
+            arr.push(a[i]);
+        }
+    }
+    return arr;
+};
+console.log(merge([1, 2, 3], [4, 5, 6]));

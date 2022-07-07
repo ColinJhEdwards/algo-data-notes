@@ -340,3 +340,21 @@ const insertionSort = (arr: number[]) => {
   }
   return arr;
 };
+
+const merge = (a: number[], b: number[]) => {
+  const arr: number[] = [];
+  let i = 0;
+  let j = 0;
+  while (i < a.length && j < b.length) {
+    if (b[j] > a[i]) {
+      arr.push(a[i]);
+      i++;
+    } else {
+      arr.push(b[j]);
+      j++;
+    }
+  }
+  return arr;
+};
+
+console.log(merge([1, 2, 3], [4, 5, 6]));
