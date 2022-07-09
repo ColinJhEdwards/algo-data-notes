@@ -369,7 +369,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
   - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
   - to make copies of objects use Object.assign or the spread operator
 
-## Searching Algorithms
+## ---------------------------Searching Algorithms---------------------------
 
 - OBJECTIVES
   - implement linear search on arrays
@@ -412,7 +412,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Rememeber this only works if your array is sorted!
 - this approach would have an approach of O(log N)
 
-## Sorting Algorithms
+## ---------------------------Sorting Algorithms---------------------------
 
 - BIG BOY STUFF
 - This is an important topic, a great challenge, and something you'll do all the time as a developer but don't be intimidated!
@@ -459,7 +459,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 - Builds up the sort by gradually creating a larger half which is always sorted
 
-![insertionSort](./images/inseritonSort.png)
+![insertionSort](./images/insertionSort.png)
 
 ### Comparing bubble, insertion, and selection sort
 
@@ -469,7 +469,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Very slow with large datasets
 - at the end of the day they are all pretty equivalent in performance
 
-## Intermediate Sorting Algorithms
+## ---------------------------Intermediate Sorting Algorithms---------------------------
 
 - Don't be scared if you dont understand the concepts so far! If you are not understanding the basic sorting methods and have trouble writing the code on your own and understanding it, thats so normal! Keep going!
 - The following sorting algorithms we will be learning about will be more of an intermediate level but they are faster compared to previous methods we just worked with.
@@ -482,4 +482,6 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Combination of merging and sorting
 - exploits the fact that rrays of 0 or 1 element are always sorted
 - works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array
--
+- Once we break down the array into single element arrays we can then compare the arrays and sort them accordingly.
+- As we begin to rebuild the array, the newly built arrays will already sorted making the process that much easier.
+- Keep in mind that merge sort uses Recursion!
