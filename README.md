@@ -1,8 +1,10 @@
 # algo-data-notes
 
-A simple repo where I can store my notes on algorithms, data structures, bigO notation and examples
+A simple repo where I can store my notes on algorithms, data structures, bigO notation and examples.
 
 # Big O Notation
+
+PSA: I like to take my notes as if I was explaining the concept to someone.
 
 ## ---------------------------Why is big O notation important?---------------------------
 
@@ -485,3 +487,10 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 - Once we break down the array into single element arrays we can then compare the arrays and sort them accordingly.
 - As we begin to rebuild the array, the newly built arrays will already sorted making the process that much easier.
 - Keep in mind that merge sort uses Recursion!
+- This can be a tough one to understand at first, my advice:
+  - Go through every single line of code and try to understand what the code is doing, try to visualize how the array is being manipulated
+  - This can take some time, I know it did for me, if your spending 10-20 minutes trying to understand a single line of code thats okay! Take your time and embrace the challenge :)
+
+![merge](./images/merge.png)
+
+![mergeSort](./images/mergeSort.png)
