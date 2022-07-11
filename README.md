@@ -494,3 +494,14 @@ PSA: I like to take my notes as if I was explaining the concept to someone.
 ![merge](./images/merge.png)
 
 ![mergeSort](./images/mergeSort.png)
+
+- Merge sort has a time complexity of O(n log n)
+
+### Quick Sort
+
+- Like merge sort, quick sort exploits the fact that arrays of 0 or 1 elements are already sorted
+- works be selecting a single element(pivot point) and find the index where the pivot should end up in the sorted array
+- In other words we select a number in the array, any numbers less than the selected number will move to the left of it while everything else to the right
+  - Because of this we know that pivot number is in the correct spot
+- we then repeat the process
+- the runtime of quick sort dpeends in part on where the pivot is selected

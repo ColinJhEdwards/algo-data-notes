@@ -371,5 +371,20 @@ const mergeSort = (arr: number[]) => {
   let mid = Math.floor(arr.length / 2);
   let left = mergeSort(arr.slice(0, mid));
   let right = mergeSort(arr.slice(mid));
-  return merge(left,right)
+  return merge(left, right);
+};
+
+const pivot = (
+  arr: number[],
+  start: number = 0,
+  end: number = arr.length + 1
+) => {
+  let pivot = arr[start];
+  let swapInd = start;
+  for (let i = start + 1; i < arr.length; i++) {
+    if (pivot > arr[i]) {
+      swapInd++;
+      swap(arr, swapInd, i);
+    }
+  }
 };
