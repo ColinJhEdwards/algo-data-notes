@@ -379,6 +379,11 @@ const pivot = (
   start: number = 0,
   end: number = arr.length + 1
 ) => {
+  const swap = (array: number[], i: number, j: number) => {
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  };
   let pivot = arr[start];
   let swapInd = start;
   for (let i = start + 1; i < arr.length; i++) {
@@ -388,3 +393,5 @@ const pivot = (
     }
   }
 };
+
+[4, 5, 7, 2, 3, 1, 9];
