@@ -504,4 +504,5 @@ PSA: I like to take my notes as if I was explaining the concept to someone.
 - In other words we select a number in the array, any numbers less than the selected number will move to the left of it while everything else to the right
   - Because of this we know that pivot number is in the correct spot
 - we then repeat the process
-- the runtime of quick sort dpeends in part on where the pivot is selected
+- the runtime of quick sort dpeends in part on where the pivot is selected, ideally it is the median value in the data set you're sorting
+  - for simplicity in the following examples we will set the first element as the pivot.
