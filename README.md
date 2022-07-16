@@ -505,4 +505,10 @@ PSA: I like to take my notes as if I was explaining the concept to someone.
   - Because of this we know that pivot number is in the correct spot
 - we then repeat the process
 - the runtime of quick sort dpeends in part on where the pivot is selected, ideally it is the median value in the data set you're sorting
-  - for simplicity in the following examples we will set the first element as the pivot.
+  - for simplicity in the following examples we will set the first element as the pivot. This can lead to problems for time complexity though
+
+![pivot](./images/pivot.png)
+
+![quickSort](./images/quickSort.png)
+
+- quick sort has a time complexity of O(n log n) as N grows we have to make O(log n) decompositions.

@@ -392,4 +392,19 @@ const pivot = (
       swap(arr, swapInd, i);
     }
   }
+  swap(arr, start, swapInd);
+  return swapInd;
+};
+
+const quickSort = (
+  arr: number[],
+  left: number = 0,
+  right: number = arr.length - 1
+) => {
+  if (left < right) {
+    let pivotIndex = pivot(arr, left, right);
+    quickSort(arr, left, pivotIndex - 1);
+    quickSort(arr, pivotIndex + 1, right);
+  }
+  return arr;
 };
