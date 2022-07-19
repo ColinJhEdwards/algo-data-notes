@@ -408,3 +408,7 @@ const quickSort = (
   }
   return arr;
 };
+
+const getDigit = (num: number, i: number) => {
+  return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
+};

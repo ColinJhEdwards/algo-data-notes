@@ -512,3 +512,16 @@ PSA: I like to take my notes as if I was explaining the concept to someone.
 ![quickSort](./images/quickSort.png)
 
 - quick sort has a time complexity of O(n log n) as N grows we have to make O(log n) decompositions.
+
+### Radix Sort
+
+- Unlike merge and quick sort, radix sort does not compare the values which we are sorting
+- Specifically works on lists of numbers
+- exploits the the fact that information about the size of a number is encoded in the number of digits
+- Something with more digits is larger than something with fewer digits
+- a couple helpers needed
+- getDigit(num, place) returns the digit in num at the given place value getDigit(5489, 0) = 9
+
+![getDigit](./images/getDigit.png)
+
+- digitCount(num) returns the number of digits in an number digitCount(55512) = 5
