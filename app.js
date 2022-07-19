@@ -324,3 +324,15 @@ var merge = function (a, b) {
   return arr;
 };
 console.log(merge([1, 2, 3], [4, 5, 6]));
+
+const radixSort = (arr) => {
+  const maxDigit = mostDigits(arr);
+  for (let k = 0; k < maxDigit; k++) {
+    let digitBuckets = Array.from({ length: 10 }, () => []);
+    for (let i = 0; i < arr.length; i++) {
+      digitBuckets[getDigit(arr[i], k)].push(arr[i]);
+    }
+    arr = [].concat(...digitBuckets);
+  }
+  return arr;
+};

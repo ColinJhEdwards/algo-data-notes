@@ -412,3 +412,19 @@ const quickSort = (
 const getDigit = (num: number, i: number) => {
   return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 };
+
+// getDigit(7323 , 2) = 7323 / 100 = 73.23 = 73 % 10 = 3
+// getDigit(7323 , 1) = 7323 / 10 = 732.3 = 732 % 10 = 2
+
+const digitCount = (num: number) => {
+  if (num === 0) return 1;
+  return Math.floor(Math.log10(Math.abs(num))) + 1;
+};
+
+const mostDigits = (list: number[]) => {
+  let maxDigits = 0;
+  for (let i = 0; i < list.length; i++) {
+    maxDigits = Math.max(maxDigits, digitCount(list[i]));
+  }
+  return maxDigits;
+};

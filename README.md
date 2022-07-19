@@ -6,6 +6,9 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 PSA: I like to take my notes as if I was explaining the concept to someone.
 
+WHAT IS LOG
+log10(1000) pretty much this reads 10 to what power will equal 1000?
+
 ## ---------------------------Why is big O notation important?---------------------------
 
 - There are so many solutions for solving an algorithm, how do we know which one is the best? This is where Big O comes in.
@@ -519,9 +522,17 @@ PSA: I like to take my notes as if I was explaining the concept to someone.
 - Specifically works on lists of numbers
 - exploits the the fact that information about the size of a number is encoded in the number of digits
 - Something with more digits is larger than something with fewer digits
+- We look at all digits in a number and starting from the right we group the numbers into buckets of 0-9
+  - 1556 when looking at the digit in the 0 position (right) which is 6, we would group this with six, we repeat this process until we reach the end of numbers
 - a couple helpers needed
-- getDigit(num, place) returns the digit in num at the given place value getDigit(5489, 0) = 9
+- getDigit(num, place) returns the digit at the given place value getDigit(5489, 0) = 9
 
 ![getDigit](./images/getDigit.png)
 
-- digitCount(num) returns the number of digits in an number digitCount(55512) = 5
+- digitCount(num) returns the number of digits in a number digitCount(55512) = 5
+
+![digitCount](./images/digitCount.png)
+
+- mostDigit() returns the largest length of a number in our list
+
+![mostDigits](./images/mostDigits.png)
