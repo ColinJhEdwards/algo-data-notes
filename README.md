@@ -536,3 +536,24 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - mostDigit() returns the largest length of a number in our list
 
 ![mostDigits](./images/mostDigits.png)
+
+## ---------------------------Data Structures---------------------------
+
+- Binary Search Trees, Queues, Singly Linked Lists, Undirected Unweighted Graphs, binary Heaps, Directed Graphs, Hash Tables, Doubly Linked Lists, Stacks
+  - So much!
+- So what makes something a data structure?
+  - they are collections of values, the relationship among them, and the funcitons or operations that can applied to the data
+  - think of something like an array or an object
+- Why so many?
+  - Different data structures excel at different things, some specialized while others are more generally used. Just remember there isnt a "best" data structure.
+- Why care?
+  - The more time you spend as a dev the mroe likely you'll need to use one of these data structures
+  - You work with them already, probably unknowingly. Such as working with the DOM
+  - and of course, interviews :)
+  - Overall they exist for a reason and are worth understanding, they are useful in the real world
+- Scenarios
+  - Working with map/location data? Probably gonna wanna use a graph
+  - need an ordered list with fast inserts/removals at the beginning and end? Linked list baby
+  - web scraping nested HTML? Plant a Tree BOOM (sorry)
+  - Write a scheduler? You gonna want a binary heap
+  - This stuff is dense, with a lot of content, dont get overwhelmed, take your time.
