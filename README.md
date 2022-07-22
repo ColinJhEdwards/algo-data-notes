@@ -565,3 +565,13 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Each element, is a node, a node stores a piece of data and references the next node.
   - If we want to access something in the linked list we start at the beginning(the head) and move up the list to the end(the tail). Think of a skyscraper, an elevator would be very similar to an array you can go straight to the floor you want to. A linked list is more like taking the stairs, you have to start at floor 1, go to floor 2, then 3, then 4, etc.
   - What's so great about a linked list is inserting/removing items because we dont have to adjust indexes.
+- Methods you'll create for a linked list
+  - Push
+  - Pop
+  - Shift
+  - Unshift
+  - Get
+  - Set
+  - Insert
+  - Remove
+  - Reverse
