@@ -396,11 +396,31 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head === newNode;
       this.tail === this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
     }
-    newNode.next = this.head;
-    this.head = newNode;
     this.length++;
     return this;
+  }
+  get(val) {
+    if (val < 0 || val >= this.length) return null;
+    let count = 0;
+    let current = this.head;
+    while (count !== index) {
+      current = current.next;
+      count++;
+    }
+    return current;
+  }
+  set(index, val) {
+    const value = this.get(index);
+    if (!value) {
+      return false;
+    } else {
+      value.val = val;
+      return true;
+    }
   }
 }
 
