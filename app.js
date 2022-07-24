@@ -493,8 +493,6 @@ class LinkedList {
   }
   pop() {
     if (this.length === 0) {
-      this.tail = 0;
-      this.head = 0;
       return undefined;
     }
     let current = this.head;
@@ -506,6 +504,17 @@ class LinkedList {
     this.tail = newTail;
     this.tail.next = null;
     this.length--;
-    return this;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return current;
+  }
+  shift() {
+    if (!this.head) return undefined;
+    const originalHead = this.head;
+    this.head = originalHead.next;
+    this.length--;
+    return originalHead;
   }
 }
