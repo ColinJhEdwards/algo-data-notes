@@ -517,4 +517,66 @@ class LinkedList {
     this.length--;
     return originalHead;
   }
+  unshift(val) {
+    const newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    let current = this.head;
+    for (let i = 0; i < index.length; i++) {
+      current = current.next;
+    }
+    return current;
+  }
+  set(index, val) {
+    const node = this.get(index);
+    if (node) {
+      node.value = val;
+      return true;
+    }
+    return false;
+  }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return null;
+    if (index === this.length) {
+      this.push(val);
+      return true;
+    }
+    if (index === 0) {
+      this.unshift(val);
+      return true;
+    }
+    const prevNode = this.get(index - 1);
+    const nextNode = prevNode.next;
+    const newNode = new Node(val);
+    prevNode.next = newNode;
+    newNode.next = nextNode;
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return null;
+    if (index === this.length - 1) {
+      this.pop();
+      return true;
+    }
+    if (index === 0) {
+      this.shift(val);
+      return true;
+    }
+    const prev = this.get(index - 1);
+    const deleted = prev.next;
+    prev.next = deleted.next;
+    this.length--;
+    return deleted;
+  }
 }
