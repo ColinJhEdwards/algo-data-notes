@@ -579,4 +579,10 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 
 ### Doubly Linked Lists
 
--
+- What is a doubly linked list?
+  - Similar to a singly linked list but now we have a pointer for both the previous node and next node
+  - We still have a head and a tail and no indexes
+  - Because we now have a pointer for both directions this will make our methods a bit more complex
+  - However this does make traversing through the list much easier, especially if we need to move backwords
+  - Also takes up more memory which is the trade off for being more flexible
+

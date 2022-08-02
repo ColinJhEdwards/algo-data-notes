@@ -464,51 +464,31 @@ list = new SinglyLinkedList();
 list.push("hello");
 list.push("bye");
 
-//  praictice
-
-class Node {
+class DNode {
   constructor(val) {
-    this.value = val;
+    this.val = val;
     this.next = null;
+    this.prev = null;
   }
 }
 
-class LinkedList {
+class DoubleLink {
   constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
   push(val) {
-    const newNode = new Node(val);
+    const newNode = new DNode(val);
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
     } else {
       this.tail.next = newNode;
+      this.tail.next.prev = this.tail;
       this.tail = newNode;
     }
-    length++;
+    this.length++;
     return this;
   }
-  pop() {
-    if (!this.head) return null;
-    let current = this.head;
-    let prev = current;
-    while (current) {
-      prev = current;
-      current = current.next;
-    }
-    this.tail = prev;
-    this.tail.next = null;
-    this.length--;
-    return current;
-  }
-  shift() {}
-  unshift(val) {}
-  get(index) {}
-  set(index, val) {}
-  insert(index, val) {}
-  remove(index) {}
-  reverse() {}
 }
