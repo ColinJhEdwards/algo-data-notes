@@ -577,4 +577,22 @@ class DoubleLink {
     this.length++;
     return true;
   }
+  remove(index) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) {
+      this.shift();
+      return true;
+    }
+    if (index === this.length) {
+      this.pop();
+      return true;
+    }
+    const removed = this.get(index);
+    removed.next.prev = removed.prev;
+    removed.prev.next = removed.next;
+    removed.next = null;
+    removed.prev = null;
+    this.length--;
+    return removed;
+  }
 }
