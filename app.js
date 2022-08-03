@@ -557,5 +557,24 @@ class DoubleLink {
       return true;
     }
   }
-  insert(index, val) {}
+  insert(index, val) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) {
+      this.unshift(val);
+      return true;
+    }
+    if (index === this.length) {
+      this.push(val);
+      return true;
+    }
+    const newNode = new DNode(val);
+    const prev = this.get(index - 1);
+    const next = prev.next;
+    prev.next = newNode;
+    newNode.prev = prev;
+    newNode.next = next;
+    next.prev = newNode;
+    this.length++;
+    return true;
+  }
 }
