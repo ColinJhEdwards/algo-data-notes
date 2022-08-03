@@ -548,4 +548,14 @@ class DoubleLink {
       return current;
     }
   }
+  set(index, val) {
+    const update = this.get(index);
+    if (!update) {
+      return false;
+    } else {
+      update.val = val;
+      return true;
+    }
+  }
+  insert(index, val) {}
 }
