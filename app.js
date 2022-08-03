@@ -519,4 +519,33 @@ class DoubleLink {
     this.length--;
     return removed;
   }
+  unshift() {
+    const newNode = new DNode(val);
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    if (index <= Math.floor(this.length / 2)) {
+      let current = this.head;
+      for (let i = 0; i < index; i++) {
+        current = current.next;
+      }
+      return current;
+    } else {
+      let current = this.tail;
+      for (let i = this.length - 1; i > index; i--) {
+        current = current.prev;
+      }
+      return current;
+    }
+  }
 }
