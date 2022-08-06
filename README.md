@@ -585,4 +585,14 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Because we now have a pointer for both directions this will make our methods a bit more complex
   - However this does make traversing through the list much easier, especially if we need to move backwords
   - Also takes up more memory which is the trade off for being more flexible
-
+- Methods you'll create for a linked list
+  - Push
+  - Pop
+  - Shift
+  - Unshift
+  - Get
+  - Set
+  - Insert
+  - Remove
+  - Reverse
+- Reference app.js line 475 for example
