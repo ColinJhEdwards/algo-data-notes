@@ -596,3 +596,11 @@ class DoubleLink {
     return removed;
   }
 }
+
+// example of a stack using an array
+const stack = [];
+stack.push("google");
+stack.push("instagram");
+stack.push("youtube");
+// remember the last thing in should be the first thing removed
+stack.pop();
