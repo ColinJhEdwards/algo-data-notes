@@ -604,3 +604,5 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - A abstract data structure that needs to follow the principle of LIFO, Last In Last Out. Think of a STACK of plates. As you pile them up when you want to remove a plate you'll start from the top or the last one you added.
 - Stacks are used for managing function invocations, undo / redo, routing, and can also be used in other algorithms/data structures
 - The main thing to focus on with stacks is that they follow the principle of LIFO, Last In Last Out
+  - Think about an array and you use the .push() method to add items, to remove the last item added you could just use .pop(). This could also be done with unshift and shift however as we know adding items to the beginning of an array is not efficient because everything will be reindexed.
+  - However keep in mind that a stack can also be built by using a linked list. A linked list does not have indexes but instead points to the nodes within. Because of this we can use the methods shift and unshift and treat them as push and pop.

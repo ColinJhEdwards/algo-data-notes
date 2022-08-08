@@ -597,10 +597,35 @@ class DoubleLink {
   }
 }
 
-// example of a stack using an array
-const stack = [];
-stack.push("google");
-stack.push("instagram");
-stack.push("youtube");
-// remember the last thing in should be the first thing removed
-stack.pop();
+// Using a linked list for a stack
+
+class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  push(val) {
+    const newNode = new Node(val);
+    if (!this.first) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      const first = this.first;
+      this.first = newNode;
+      this.first.next = first;
+    }
+    this.length++;
+  }
+  pop() {
+    if (!this.head) return null;
+    const temp = this.first;
+    if (this.length === 1) {
+      this.first = null;
+      this.last = null;
+    }
+    this.first = temp.next;
+    this.length--;
+    return temp;
+  }
+}
