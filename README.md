@@ -596,3 +596,10 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Remove
   - Reverse
 - Reference app.js line 475 for example
+
+### Stacks and Queues
+
+- Stacks an Queues are often used together and taught together
+- What is a stack?
+  - A abstract data structure that needs to follow the principle of LIFO, Last In Last Out. Think of a STACK of plates. As you pile them up when you want to remove a plate you'll start from the top or the last one you added.
+- Stacks are used for managing function invocations, undo / redo, routing, and can also be used in other algorithms/data structures
