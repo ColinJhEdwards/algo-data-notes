@@ -635,7 +635,11 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Binary
   - B trees
   - Heaps
-  - and more!
+  - And more!
+  - Each type has its own type as well, lots of trees.
 - We will be focusing on binary trees, and binary search trees
   - Binary trees specifically only have up to two children per node. This makes them easier to navigate
   - Binary Search trees are a special case of a binary tree, they are sorted in particular way. Generally used to store data that can be compared.
+    - When sorting numbers for example, everything to the left of the parent node will be less than the parent node while everything to the right will be greater than
+    - We sort in this way because it makes the tree easier to traverse and search through. Its very similar to the binary search algorithm we covered earlier.
+    - Say we are looking for the number 72 in a tree. We start at the root and check if 72 is greater than or less than the root and begin traversing the tree and repeat the process.
