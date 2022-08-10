@@ -609,3 +609,17 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - What is a queue?
   - Similar to a stack, add data in and remove, however the order is different. We follow the principle of FIFO, First In First Out
   - Think about a line, a queue, first person in will be the first person out.
+
+### Trees
+
+- What is a tree?
+  - A data structure that consists of ndoes in parent / child relationship. We end up with branches that connect up to other nodes and can split off in other directions.
+- When we talk about lists they are linear, one thing after the other. Trees are nonlinear, there is many different paths we can take.
+- Nodes can't referrence to other branches, there must be a parent / child relationships
+- There has to be a single root, we can't have multible.
+- Terminology
+  - Root: The top node in a tree, the starting point
+  - Child: A node directly connected to another node when moving away from the root
+  - Parent: The converse notion of a child
+  - Siblings: A group of nodes with the same parent
+  - Leaf: A node with no children
