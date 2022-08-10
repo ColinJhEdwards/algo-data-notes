@@ -613,7 +613,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 ### Trees
 
 - What is a tree?
-  - A data structure that consists of ndoes in parent / child relationship. We end up with branches that connect up to other nodes and can split off in other directions.
+  - A data structure that consists of nodes in parent / child relationship. We end up with branches that connect up to other nodes and can split off in other directions.
 - When we talk about lists they are linear, one thing after the other. Trees are nonlinear, there is many different paths we can take.
 - Nodes can't referrence to other branches, there must be a parent / child relationships
 - There has to be a single root, we can't have multible.
@@ -623,3 +623,19 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Parent: The converse notion of a child
   - Siblings: A group of nodes with the same parent
   - Leaf: A node with no children
+  - Edge: The connection between one node and another
+- Real world uses
+  - HTML DOM
+  - Network Routing
+  - Abstract Syntax Trees
+  - Artificial intelligence (decision trees)
+  - Folders in operating systems
+  - JSON
+- Types of Trees
+  - Binary
+  - B trees
+  - Heaps
+  - and more!
+- We will be focusing on binary trees, and binary search trees
+  - Binary trees specifically only have up to two children per node. This makes them easier to navigate
+  - Binary Search trees are a special case of a binary tree, they are sorted in particular way. Generally used to store data that can be compared.
