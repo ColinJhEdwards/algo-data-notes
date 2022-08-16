@@ -661,4 +661,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
     - Loop as long as there is anything in the queue
     - Return the variables stored
 - Depth first search: Pre Order
-  - We traverse down instead of left to right
+  - We traverse down instead of left to right. So we start from the root, check if there is a left and a right and use recursion to repeat the process.
+- Depth first search: Post Order
+  - We traverse down still, however we work are way to the very end of the tree and add values as we work our way back to the root
+  - Your code will be very similar to DFS Pre Order

@@ -70,4 +70,15 @@ class BinarySearchTree {
     helper(current);
     return data;
   }
+  DFSPostOrder() {
+    const data = [];
+    const current = this.root;
+    const helper = (node) => {
+      if (node.left) helper(node.left);
+      if (node.right) helper(node.right);
+      data.push(node);
+    };
+    helper(current);
+    return data;
+  }
 }
