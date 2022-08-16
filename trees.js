@@ -61,12 +61,13 @@ class BinarySearchTree {
   }
   DFSPreOrder() {
     const data = [];
-    const current = this.root;
+    let current = this.root;
     const helper = (node) => {
       data.push(node);
       if (node.left) helper(node.left);
-      if (node.right) helper(node.rigth);
+      if (node.right) helper(node.right);
     };
     helper(current);
+    return data;
   }
 }
