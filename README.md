@@ -668,7 +668,22 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - Depth first search: InOrder
   - Very similar code again however this time we check all left nodes before checking right nodes
 - BFS vs DFS
+
   - It depends and in some situations one is better than the other!
   - Time complexity is pointless when comparing the two, either way we will be visiting all nodes within a tree
   - Space complexity is what we want to keep in mind
   - In short, with a really "wide" tree depth first will usually perform better, while with a really "deep" tree breadth first would perform better
+
+  ### Heaps
+
+  - Heaps are just another type of tree with specific rules
+  - we will be focusing on binary heaps
+  - A binary heap is similar to a binary search tree but with different rules
+    - MaxBinaryHeap: Parent nodes are always larfer han child nodes
+      - Each parent has at most two child nodes
+      - The value of each parent node is always greater than its child nodes
+      - In a max binary heap the parent is greater than the children but there are no guarantees between sibling nodes. This means from left to right there is no implied order
+    - MinBinaryHeap: Parent nodes are always smaller than child nodes
+      - Just like maxBinary heap but the root will be our smallest number
+  - They are used to implement priority queues which are very commonly used. They allow us to sort through queues and assign priorities.
+  - Also used for graph traversal
