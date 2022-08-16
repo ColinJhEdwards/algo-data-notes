@@ -81,4 +81,15 @@ class BinarySearchTree {
     helper(current);
     return data;
   }
+  DFSInOrder() {
+    const data = [];
+    const current = this.root;
+    const helper = (node) => {
+      if (node.left) helper(node.left);
+      data.push(node);
+      if (node.right) helper(node.right);
+    };
+    helper(current);
+    return data;
+  }
 }

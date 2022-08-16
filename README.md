@@ -665,3 +665,9 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - Depth first search: Post Order
   - We traverse down still, however we work are way to the very end of the tree and add values as we work our way back to the root
   - Your code will be very similar to DFS Pre Order
+- ## Depth first search: InOrder
+- BFS vs DFS
+  - It depends and in some situations one is better than the other!
+  - Time complexity is pointless when comparing the two, either way we will be visiting all nodes within a tree
+  - Space complexity is what we want to keep in mind
+  - In short, with a really "wide" tree depth first will usually perform better, while with a really "deep" tree breadth first would perform better
