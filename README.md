@@ -648,8 +648,17 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 
 - Given a tree, any kind, how do we visit every node one time?
   - Breadth first search
-    - we work "across" the tree, think left to right
+    - we work "across" the tree, think left to right or horizontally
   - Depth first search
     - In order
     - Pre order
     - Post Order
+- Breadth first search
+  - We want to visit every node on the same level before we look at a child node.
+  - The steps:
+    - Create a queue that will store the valeus of nodes visited, it is recommended to just use an array rather than creating your own class.
+    - Place the root node in the queue
+    - Loop as long as there is anything in the queue
+    - Return the variables stored
+- Depth first search: Pre Order
+  - We traverse down instead of left to right
