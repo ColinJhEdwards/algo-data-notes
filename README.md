@@ -679,11 +679,16 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Heaps are just another type of tree with specific rules
   - we will be focusing on binary heaps
   - A binary heap is similar to a binary search tree but with different rules
-    - MaxBinaryHeap: Parent nodes are always larfer han child nodes
+    - MaxBinaryHeap: Parent nodes are always larger han child nodes
       - Each parent has at most two child nodes
       - The value of each parent node is always greater than its child nodes
       - In a max binary heap the parent is greater than the children but there are no guarantees between sibling nodes. This means from left to right there is no implied order
+      - The left child is always filled first followed by the right
     - MinBinaryHeap: Parent nodes are always smaller than child nodes
       - Just like maxBinary heap but the root will be our smallest number
   - They are used to implement priority queues which are very commonly used. They allow us to sort through queues and assign priorities.
   - Also used for graph traversal
+  - To find the child of a parent node you would take the parents index, multiply it by two and add one for the left child, add two for the right child
+  - To find the parent of a child node you would take the childs index, subtract 1, and divide it by two. You would also use Math.Floor() to account for decimals
+  - Why is finding the parent / child important?
+    - Lets say we are adding a value to are max binary heap such as 55. We would first add 55 to the end of our heap, and since we are using an array to store our values 55 would be at the end of the array. However what if 55 is are largest value? If we are following the rules of a max binary heap 55 should be first. We would then have to compare the parent elements values to 55 which is why the above method for finding parents / children is imporant.
