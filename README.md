@@ -666,6 +666,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - We traverse down still, however we work are way to the very end of the tree and add values as we work our way back to the root
   - Your code will be very similar to DFS Pre Order
 - Depth first search: InOrder
+  - Very similar code again however this time we check all left nodes before checking right nodes
 - BFS vs DFS
   - It depends and in some situations one is better than the other!
   - Time complexity is pointless when comparing the two, either way we will be visiting all nodes within a tree
