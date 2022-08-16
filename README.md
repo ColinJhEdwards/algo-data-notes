@@ -643,3 +643,13 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
     - When sorting numbers for example, everything to the left of the parent node will be less than the parent node while everything to the right will be greater than
     - We sort in this way because it makes the tree easier to traverse and search through. Its very similar to the binary search algorithm we covered earlier.
     - Say we are looking for the number 72 in a tree. We start at the root and check if 72 is greater than or less than the root and begin traversing the tree and repeat the process.
+
+### Tree Traversal
+
+- Given a tree, any kind, how do we visit every node one time?
+  - Breadth first search
+    - we work "across" the tree, think left to right
+  - Depth first search
+    - In order
+    - Pre order
+    - Post Order
