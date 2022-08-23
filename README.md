@@ -674,7 +674,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Space complexity is what we want to keep in mind
   - In short, with a really "wide" tree depth first will usually perform better, while with a really "deep" tree breadth first would perform better
 
-  ### Heaps
+### Heaps
 
 - Heaps are just another type of tree with specific rules
 - we will be focusing on binary heaps
@@ -695,3 +695,15 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - As mentioned above heaps are popular for implenting priority queues. So what is a priority queue?
   - A data structure where each element has a priority. Elements with a higher priority are served before elements with lower priorities.
   - Think of a queue at at a bank, if a member walks in and has an appointment, even if there is already people in the queue, the member with the appointment will be pulled next
+
+### Hash Tables
+
+- Hash tables are used to store key-value pairs, much like an array, but the keys are not ordered. They are also much faster than arrays for finding, removing, and inserting values.
+  - Nearly all programming languages has some sort of a hash table data structure
+  - Python has dictionaries, JS has objects, ruby has hashes
+- Imagine we want to store some colors, we could use an array
+  - [#asd2a2, #adsr22, #ffas222]
+- the above is not very readable, it is diffcult to understand what the colors corespond to.
+- Instead it would be easier to use the key-value method
+  - pink ---> #ff69b4, red ---> #ff4500, cyan ---> #00ffff
+- You could do this easily with an object but for practice we will be implenting our own hash table
