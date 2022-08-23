@@ -706,4 +706,10 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - the above is not very readable, it is diffcult to understand what the colors corespond to.
 - Instead it would be easier to use the key-value method
   - pink ---> #ff69b4, red ---> #ff4500, cyan ---> #00ffff
-- You could do this easily with an object but for practice we will be implenting our own hash table
+- You could do this easily with an object but for practice we will be implenting our own hash table by using an array
+- We will need a way to convert keys into valid array indices
+  - Functions that assist us in doing this are called hash functions
+- What makes a good hash?
+  - Fast
+  - Doesnt cluster outputs at specific indices, but distributes uniformly
+  - Deterministic, same input yields same output
