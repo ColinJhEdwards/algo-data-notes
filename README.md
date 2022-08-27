@@ -713,5 +713,11 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Fast
   - Doesnt cluster outputs at specific indices, but distributes uniformly
   - Deterministic, same input yields same output
+- Collisions are when a value is assigned to an exisiting key that already has a value. Such as 5 = pink, we then insert blue which just happens to be assigned 5 as well
+  - There is a few way to deal with collisions
 - Prime numbers help reduce the amount of collisions we encounter in our hash table
   - The mathmatical explanation as to why this is the case is complex and tough to explain. Just remember, prime numbers reduce collisions
+- Separate chaining
+  - Store the pieces of data at the same spot using another nested data structure
+- linear probing
+  - Only store one piece of data at each position, whenver there is a collision we look ahead for the next empty slot
