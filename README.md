@@ -713,3 +713,5 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Fast
   - Doesnt cluster outputs at specific indices, but distributes uniformly
   - Deterministic, same input yields same output
+- Prime numbers help reduce the amount of collisions we encounter in our hash table
+  - The mathmatical explanation as to why this is the case is complex and tough to explain. Just remember, prime numbers reduce collisions
