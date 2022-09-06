@@ -651,8 +651,8 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
     - we work "across" the tree, think left to right or horizontally
   - Depth first search
     - In order
-    - Pre order
-    - Post Order
+    - Pre-order
+    - Post-Order
 - Breadth first search
   - We want to visit every node on the same level before we look at a child node.
   - The steps:
