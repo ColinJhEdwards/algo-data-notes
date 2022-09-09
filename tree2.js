@@ -65,4 +65,14 @@ class Tree {
       }
     }
   }
+  BFS() {
+    const visited = [];
+    const que = [];
+    let visit = this.root;
+    que.push(visit);
+    while (que.length) {
+      visit = que.shift();
+      visited.push(visit);
+    }
+  }
 }
