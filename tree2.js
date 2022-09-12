@@ -75,4 +75,15 @@ class Tree {
       visited.push(visit);
     }
   }
+  DFSPre() {
+    const data = [];
+    let current = this.root;
+    const helper = (node) => {
+      data.push(node);
+      if (node.left) helper(node.left);
+      if (node.right) helper(node.right);
+    };
+    helper(current);
+    return data;
+  }
 }
