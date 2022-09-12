@@ -87,3 +87,30 @@ class Tree {
     return data;
   }
 }
+
+//  Heap stuff
+
+class MaxHeap {
+  constructor() {
+    this.values = [];
+  }
+  insert(val) {
+    this.values.push(val);
+    this.bubbleUp();
+  }
+  bubbleUp() {
+    let index = this.values.length - 1;
+    const val = this.values[index];
+    while (true) {
+      let parentIndex = Math.floor((index - 1) / 2);
+      let parent = this.values[parentIndex];
+      if (val > parent) {
+        this.values[parentIndex] = val;
+        this.values[index] = parent;
+        index = parentIndex;
+      } else {
+        break;
+      }
+    }
+  }
+}
