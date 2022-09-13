@@ -116,8 +116,11 @@ class MaxHeap {
   remove() {
     const max = this.values[0];
     const end = this.values.pop();
-    this.values[0] = end;
-    this.sinkdown();
+    if (this.values.length > 0) {
+      this.values[0] = end;
+      this.sinkdown();
+    }
+
     return max;
   }
   sinkdown() {
