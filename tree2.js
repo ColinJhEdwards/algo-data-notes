@@ -101,7 +101,7 @@ class MaxHeap {
   bubbleUp() {
     let index = this.values.length - 1;
     const val = this.values[index];
-    while (true) {
+    while (index > 0) {
       let parentIndex = Math.floor((index - 1) / 2);
       let parent = this.values[parentIndex];
       if (val > parent) {
@@ -111,6 +111,44 @@ class MaxHeap {
       } else {
         break;
       }
+    }
+  }
+  remove() {
+    const max = this.values[0];
+    const end = this.values.pop();
+    this.values[0] = end;
+    this.sinkdown();
+    return max;
+  }
+  sinkdown() {
+    let idx = 0;
+    const length = this.values.length;
+    const element = this.values[0];
+    while (true) {
+      let leftIndex = 2 * idx + 1;
+      let rightIndex = 2 * idx + 2;
+      let left;
+      let right;
+      let swap = null;
+      if (leftIndex < length) {
+        left = this.values[leftChild];
+        if (left > element) {
+          swap = leftIndex;
+        }
+      }
+      if (rightIndex) {
+        right = this.values[rightIndex];
+        if (
+          (swap === null && rightChild > element) ||
+          (swap !== null && right > left)
+        ) {
+          swap = rightIndex;
+        }
+      }
+      if (swap === null) break;
+      this.values[idx] = this.values[swap];
+      this.values[swap] = element;
+      idx = swap;
     }
   }
 }
