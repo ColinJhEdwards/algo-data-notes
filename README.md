@@ -689,7 +689,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Lets say we are adding a value to are max binary heap such as 55. We would first add 55 to the end of our heap, and since we are using an array to store our values 55 would be at theend of the array. However what if 55 is are largest value? If we are following the rules of a max binary heap 55 should be first. We would then have to compare the parent elementsvalues to 55 which is why the above method for finding parents / children is imporant.
 - As mentioned above heaps are popular for implenting priority queues. So what is a priority queue?
   - A data structure where each element has a priority. Elements with a higher priority are served before elements with lower priorities.
-  - Think of a queue at at a bank, if a member walks in and has an appointment, even if there is already people in the queue, the member with the appointment will be pulled next
+  - Think of a queue at a bank, if a member walks in and has an appointment, even if there is already people in the queue, the member with the appointment will be pulled next
 
 ### Hash Tables
 
