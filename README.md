@@ -690,6 +690,7 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - As mentioned above heaps are popular for implenting priority queues. So what is a priority queue?
   - A data structure where each element has a priority. Elements with a higher priority are served before elements with lower priorities.
   - Think of a queue at a bank, if a member walks in and has an appointment, even if there is already people in the queue, the member with the appointment will be pulled next
+  - Priority queues take advantage of how Heaps function, whether its a min or max heap the structure of the heap represents the priority. We compared the priority given to the node rather than the value and sort accordingly.
 
 ### Hash Tables
 
@@ -716,3 +717,5 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Store the pieces of data at the same spot using another nested data structure
 - linear probing
   - Only store one piece of data at each position, whenver there is a collision we look ahead for the next empty slot
+- In order to look up values by key, we need a way to convert keys into valid array indices
+  - A function that performs this task is called hash function
