@@ -47,9 +47,15 @@ class HashTable {
   }
   keys() {
     const array = this.keyMap;
-    let newArray = [];
+    const newArray = [];
     for (let i = 0; i < array.length; i++) {
-      newArray.push(array[i][0]);
+      if (array[i]) {
+        if (!newArray.includes(array[i][j][0])) {
+          for (let j = 0; j < array[i].length; j++) {
+            newArray.push(array[i][j][0]);
+          }
+        }
+      }
     }
     return newArray;
   }
