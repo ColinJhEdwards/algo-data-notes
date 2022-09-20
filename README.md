@@ -719,3 +719,5 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Only store one piece of data at each position, whenver there is a collision we look ahead for the next empty slot
 - In order to look up values by key, we need a way to convert keys into valid array indices
   - A function that performs this task is called hash function
+  - See the hash function under hashTables.js
+  - This hash function only works with strings, and isnt constant time due to it being linear in key length
