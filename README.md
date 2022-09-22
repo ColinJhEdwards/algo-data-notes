@@ -722,3 +722,23 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Store the pieces of data at the same spot using another nested data structure
 - linear probing
   - Only store one piece of data at each position, whenver there is a collision we look ahead for the next empty slot
+
+### Graphs
+
+- (not talking about a chart)
+- A graph data structure consists of a finite set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirectied graph or set of ordered pairs for an directed graphs.
+  - In other words - a collection of nodes and connections between those nodes.
+  - Unlike a tree or linked list there is not starting place like a root or head, the nodes are all treated equally. The import piece is how they are connected
+- Used in pretty much any social network, location/mapping, routing algorithms, visual hierarchy, file system optimizations and more!
+- Essential graph terms
+  - Vertex: a node
+  - Edge: connection between the nodes
+- Types of Graphes
+  - Undirected
+  - Directed
+  - Unweighted
+  - Weighted
+- So how do we build this out in code?
+  - Adjacency Matrix allows us to store information in a row and columns format to determine which nodes are connected.
+  - Adjacency List allows us to store informaton in a list format. We store our nodes and an index and create an array of that nodes connections.
+  
