@@ -4,8 +4,6 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 
 # Big O Notation
 
-PSA: I like to take my notes as if I was explaining the concept to someone.
-
 WHAT IS LOG
 log10(1000) pretty much this reads 10 to what power will equal 1000?
 
@@ -741,4 +739,18 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - So how do we build this out in code?
   - Adjacency Matrix allows us to store information in a row and columns format to determine which nodes are connected.
   - Adjacency List allows us to store informaton in a list format. We store our nodes and an index and create an array of that nodes connections.
-  
+
+### Graph Traphersal
+
+- Checking every node in a graph can be a bit tickier compared to checking every node in a tree
+  - with a tree there is a linear path to follow unlike a graph that can have many collections of nodes and connections, could be directed or undirected, there is no root
+- You will most likely visit nodes you already have which is normal
+- Why care?
+  - Peer to peer networking
+  - Web Crawlers
+  - Finding closest matches/recommendations
+  - Shortest path problems such as GPS navigation
+- Depth First Traphersal
+  - Starting from our first node we go from one sibling to the next and keep track of where we have been
+- Breadth First Traphersal
+  - Starting from our first node we would check the first sibling node but before moving on we would go back to our first node and check all other neighbors
