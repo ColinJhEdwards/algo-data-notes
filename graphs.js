@@ -24,4 +24,20 @@ class Graph {
     }
     delete this.adjacencyList[val];
   }
+  DFSrec(vertex) {
+    const results = [];
+    const visited = {};
+    const adjacenyList = this.adjacencyList;
+    (function helper(vertex) {
+      if (!vertex) return null;
+      visited[vertex] = true;
+      results.push(vertex);
+      adjacenyList[vertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          return helper(neighbor);
+        }
+      });
+    })(vertex);
+    return results;
+  }
 }
