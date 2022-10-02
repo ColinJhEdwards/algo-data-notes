@@ -40,4 +40,25 @@ class Graph {
     })(vertex);
     return results;
   }
+  DFSit(vertex) {
+    const s = [];
+    const results = [];
+    const visited = {};
+    s.push(vertex);
+    visited[vertex] = true;
+    let current;
+    while (s.length > 0) {
+      current = s.pop();
+      if (!visited[current]) {
+        results.push(current);
+        this.adjacencyList[current].forEach((neighbor) => {
+          if (!visited[neighbor]) {
+            visited[neighbor] = true;
+            stack.push(neighbor);
+          }
+        });
+      }
+    }
+    return results;
+  }
 }
