@@ -61,4 +61,22 @@ class Graph {
     }
     return results;
   }
+  BFS(vertex) {
+    const queue = [vertex];
+    const visited = {};
+    const results = [];
+    visited[vertex] = true;
+    let current;
+    while (queue.length) {
+      current = queue.shift();
+      results.push(current);
+      this.adjacencyList[current].forEach((n) => {
+        if (!visited[n]) {
+          visited[n] = true;
+          queue.push(n);
+        }
+      });
+    }
+    return results;
+  }
 }
