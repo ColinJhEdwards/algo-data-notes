@@ -65,7 +65,7 @@ class Graph {
     const queue = [vertex];
     const visited = {};
     const results = [];
-    visited[vertex] = true;
+
     let current;
     while (queue.length) {
       current = queue.shift();

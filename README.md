@@ -754,3 +754,11 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
   - Starting from our first node we go from one sibling to the next and keep track of where we have been
 - Breadth First Traphersal
   - Starting from our first node we would check the first sibling node but before moving on we would go back to our first node and check all other neighbors
+
+## Dijkstra's Algorithm
+
+- One of the most famous algorithms out there, most people in the world of computer science know about it. Also used A LOT
+- This algorithm does not implement a new data structure but we will be taking advantage of graphs and prioriety queues.
+- What is it?
+  - Finds the shortest path between two vertices on a graph. "What is the fastest way to get from point A to point B?"
+  - Created by Edsger Dijkstra, a Dutch programmer, physicis, essayist, overall smart guy. Helped to advance the field of computer science to an academic discipline.
