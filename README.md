@@ -762,4 +762,17 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - What is it?
   - Finds the shortest path between two vertices on a graph. "What is the fastest way to get from point A to point B?"
   - Created by Edsger Dijkstra, a Dutch programmer, physicist, essayist, overall smart guy. Helped to advance the field of computer science to an academic discipline.
-  -
+
+## Dynamic Programming
+
+- What is it?
+  - A method for solving a complex problem by breaking itk down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions.
+- Most problems cant be solved with it, but the problems it can be applied to become much easier.
+- Only really works on problems with overlapping subproblems
+  - Think of the fibbonaci sequence
+  - Something like merge sort has subproblems but they are not overlapping, we are sorting different pieces every time
+  - However imagine we had a problem like mergeSort([10,24,10,24]) we then have overlapping subproblems
+- Only really works on problems with optimal substructure
+  - The optimal solution can be constructed from optimal solutions of its subproblems
+  - For example finding the shortest past from point A to point D. If we know that path is A -> B -> C -> D then we also know that the shortest path from A to C is A -> B -> C
+- In the dynamicProgramming.js file we will demonstrate the concept with the fobonacci sequence.
