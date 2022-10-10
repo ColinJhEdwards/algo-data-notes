@@ -775,4 +775,6 @@ log10(1000) pretty much this reads 10 to what power will equal 1000?
 - Only really works on problems with optimal substructure
   - The optimal solution can be constructed from optimal solutions of its subproblems
   - For example finding the shortest past from point A to point D. If we know that path is A -> B -> C -> D then we also know that the shortest path from A to C is A -> B -> C
-- In the dynamicProgramming.js file we will demonstrate the concept with the fobonacci sequence.
+- In the dynamicProgramming.js file we will demonstrate the concept with the fibonacci sequence.
+- In dynamic programming we can use memoization to store answers to repeating subproblems so we can reference them instead of repeating them over and over. Making oour code more efficent
+- We can also use tabulation which is usually done using iteration instead of recursion
