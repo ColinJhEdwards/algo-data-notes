@@ -5,7 +5,7 @@ A simple repo where I can store my notes on algorithms, data structures, bigO no
 # Big O Notation
 
 WHAT IS LOG
-log10(1000) pretty much this reads 10 to what power will equal 1000?
+log10(1000) this reads 10 to what power will equal 1000?
 
 ## ---------------------------Why is big O notation important?---------------------------
 
